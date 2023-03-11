@@ -1,14 +1,17 @@
 body{
     margin: 0;
+    padding-top: 42px;
+}
+header{
+    margin:0;
 }
 nav ul{
     background-color:#333;
     width: 100%;
     list-style-type: none;
     color: azure;
-    margin: 0;
     padding: 0;
-    overflow: hidden;
+    margin: 0;
     position: fixed;
     top: 0;
 }
@@ -31,3 +34,36 @@ nav ul li a:hover:not(.font-effect-fire){
 .active{
     background-color:cadetblue;
 }
+.grid-container{
+    display: inline-grid;
+    border: 1px solid black;
+    width: 100%;
+    margin: 10px;
+    grid-template-columns: auto auto auto;
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  #homepic {
+    grid-column-start: 1;
+    grid-column-end:4;
+  }
+  .val{
+    background-image: url("val.jpg");
+    background-repeat: no-repeat;
+    height: 512px;
+  }
+  .lol{
+    background-image: url("lol.jpg");
+    height:512px;
+    background-repeat: no-repeat;
+  }
+  .genshin{
+    background-image: url("genshin.jpg");
+    height:512px;
+    background-repeat: no-repeat;
+  }
