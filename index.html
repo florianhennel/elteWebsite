@@ -7,6 +7,7 @@
     <title>Gamer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         function next(classN){
             if(classN == "val"){
@@ -48,8 +49,8 @@
     <main class="grid-container" >
         
         <div class="grid-item" id="homepic">
-            <button type="button" onclick="previous(document.getElementById('homepic').className)">Previous</button>
-            <button type="button" onclick="next(document.getElementById('homepic').className)">Next</button>
+            <a type="button" class="skipbtn" style="float:left;" onclick="previous(document.getElementById('homepic').className)">&#8249;</a>
+            <a type="button" class="skipbtn" style="float:right;"onclick="next(document.getElementById('homepic').className)">&#8250;</a>
         </div>
 
         <div class="grid-item">2</div>

@@ -1,6 +1,5 @@
 body{
     margin: 0;
-    padding-top: 42px;
 }
 header{
     margin:0;
@@ -36,14 +35,11 @@ nav ul li a:hover:not(.font-effect-fire){
 }
 .grid-container{
     display: inline-grid;
-    border: 1px solid black;
     width: 100%;
-    margin: 10px;
     grid-template-columns: auto auto auto;
 }
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
@@ -51,19 +47,34 @@ nav ul li a:hover:not(.font-effect-fire){
   #homepic {
     grid-column-start: 1;
     grid-column-end:4;
+    height: 100vh;
   }
   .val{
     background-image: url("val.jpg");
     background-repeat: no-repeat;
-    height: 512px;
+    height: 100vh;
   }
   .lol{
     background-image: url("lol.jpg");
-    height:512px;
+    height: 100vh;
     background-repeat: no-repeat;
   }
   .genshin{
     background-image: url("genshin.jpg");
-    height:512px;
+    height: 100vh;
     background-repeat: no-repeat;
   }
+ .skipbtn{
+    position:relative;
+    top: 50%;
+    border-radius: 50%;
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 14px;
+ }
+ .skipbtn:hover{
+    background-color: #111;
+    cursor: pointer;
+ }
