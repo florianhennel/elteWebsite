@@ -25,7 +25,7 @@ nav ul li a{
     font-size: 17px;
     font-family: Audiowide, sans-serif;
 }
-nav ul li a:hover:not(.active){
+nav ul li a:hover:not(.font-effect-fire){
     background-color: #111;
 }
 .active{
