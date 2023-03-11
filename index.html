@@ -7,15 +7,57 @@
     <title>Gamer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire">
+    <script>
+        function next(classN){
+            if(classN == "val"){
+
+                document.getElementById('homepic').className = "lol";
+            }
+            else if(classN == "lol"){
+                document.getElementById('homepic').className = "genshin";
+            }
+            else{
+                document.getElementById('homepic').className = "val";
+            } 
+        }
+        function previous(classN){
+            if(classN == "val"){
+
+                document.getElementById('homepic').className = "genshin";
+            }
+            else if(classN == "lol"){
+                document.getElementById('homepic').className = "val";
+            }
+            else{
+                document.getElementById('homepic').className = "lol";
+            } 
+        }
+        </script>
 </head>
-<body>
+<body onload="document.getElementById('homepic').className ='val'">
+    <header>
     <nav>
         <ul>
-            <li><a href="./index.html" class="font-effect-fire" >Home</a></li>
+            <li><a  href="./index.html" class="font-effect-fire" >Home</a></li>
             <li><a href="./valorant.html">Valorant</a></li>
             <li><a href="./lol.html">League of Legends</a></li>
             <li><a href="./genshin.html">Genshin Impact</a></li>
         </ul>
     </nav>
+    </header>
+    <main class="grid-container" >
+        
+        <div class="grid-item" id="homepic">
+            <button type="button" onclick="previous(document.getElementById('homepic').className)">Previous</button>
+            <button type="button" onclick="next(document.getElementById('homepic').className)">Next</button>
+        </div>
+
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+    </main>
 </body>
 </html>
