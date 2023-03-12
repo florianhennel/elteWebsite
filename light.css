@@ -5,10 +5,9 @@ header{
     margin:0;
 }
 nav ul{
-    background-color:#333;
+    background-color:gainsboro;
     width: 100%;
     list-style-type: none;
-    color: azure;
     padding: 0;
     margin: 0;
     position: fixed;
@@ -77,4 +76,7 @@ nav ul li a:hover:not(.font-effect-fire){
  .skipbtn:hover{
     background-color: #111;
     cursor: pointer;
+ }
+ .icon{
+  height: 17px;
  }
