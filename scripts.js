@@ -2,10 +2,15 @@ function setcss() {
     if (localStorage.getItem('theme') == "light.css") {
         var element = document.getElementById('css');
         element.setAttribute('href',"light.css");
+        var icon = document.getElementById('icon');
+        icon.setAttribute('src',"light-mode-toggle-icon.png");
     }
     else if(localStorage.getItem('theme') == "dark.css"){
         var element = document.getElementById('css');
         element.setAttribute('href',"dark.css");
+        var icon = document.getElementById('icon');
+        icon.setAttribute('src',"dark-mode-toggle-icon.png");
+        icon.classList.add('invert');
     }
     else {
         var element = document.getElementById('css');
@@ -38,12 +43,16 @@ function previous(classN) {
 }
 function lightswitch() {
     var darklight = document.getElementById('css');
+    var icon = document.getElementById('icon');
     if (darklight.getAttribute('href') == 'light.css') {
         document.getElementById('css').setAttribute('href', 'dark.css');
         localStorage.setItem('theme','dark.css');
+        icon.setAttribute("src","dark-mode-toggle-icon.png");
+        icon.classList.add('invert');
     }
     else {
         document.getElementById('css').setAttribute('href', 'light.css');
         localStorage.setItem('theme','light.css');
+        icon.setAttribute('src',"light-mode-toggle-icon.png");
     }
 }

@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    
 }
 header{
     margin:0;
@@ -25,58 +26,71 @@ nav ul li a{
     padding: 10px 15px;
     font-size: 17px;
     font-family: Audiowide, sans-serif;
+    
 }
-nav ul li a:hover:not(.font-effect-fire){
-    background-color: #111;
+nav ul li a:hover:not(.font-effect-fire,.font-effect-neon,.toggleicon){
+    background-color: #333;
+    color: white;
 }
-.active{
-    background-color:cadetblue;
+.toggleicon:hover{
+  cursor: pointer;
+  background-color: #555;
 }
 .grid-container{
     display: inline-grid;
+    margin-top: 42px;
     width: 100%;
-    grid-template-columns: auto auto auto;
+    background-color:lightblue;
+    grid-template-columns: auto 70vw auto;
+    column-gap: 1vw;
+    row-gap: 20px;
 }
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
+  margin:0;
+    border: 1px solid black;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: none;
   }
   #homepic {
-    grid-column-start: 1;
-    grid-column-end:4;
-    height: 100vh;
+    height: 70vh;
+    text-align: center;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: none;
+    padding: 20px;
   }
   .val{
     background-image: url("val.jpg");
     background-repeat: no-repeat;
-    height: 100vh;
+    background-size: 100%;
   }
   .lol{
     background-image: url("lol.jpg");
-    height: 100vh;
+    background-size: 100%;
     background-repeat: no-repeat;
   }
   .genshin{
     background-image: url("genshin.jpg");
-    height: 100vh;
+    background-size: 100%;
     background-repeat: no-repeat;
   }
  .skipbtn{
     position:relative;
     top: 50%;
     border-radius: 50%;
-    color: white;
-    background-color: #333;
+    color: #111;
+    background-color: rgba(255, 255, 255, 0.603);
     text-decoration: none;
     display: inline-block;
     padding: 8px 14px;
  }
  .skipbtn:hover{
-    background-color: #111;
+    background-color: rgba(255, 255, 255, 0.89);
     cursor: pointer;
  }
- .icon{
+ #icon{
   height: 17px;
  }
