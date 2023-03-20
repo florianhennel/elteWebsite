@@ -11,17 +11,18 @@
 </head>
 <body onload = "setcss()">
     <nav>
-        <ul>
-            <li><a  href="./index.html" class="font-effect-fire" >Home</a></li>
-            <li><a href="./europa.html">Európa</a></li>
-            <li><a href="./azsia.html">Ázsia</a></li>
-            <li><a href="./amerika.html">Amerika</a></li>
-            <li><a href="./arlista.html">Árlista</a></li>
-            <li><a href="./foglalas.html">Utazás Foglalása</a></li>
-            <li style="float:right;"><a type="button" class="toggleicon" onclick="lightswitch()"><img id="icon" src="light-mode-toggle-icon.png" alt=""></a></li>
-            <li style="float:right;"><a href="contact">Kapcsolat</a></li>
-            
-        </ul>
+        <div class="centered-nav">
+            <a href="./europa.html">Európa</a>
+            <a href="./azsia.html" class="font-effect-neon">Ázsia</a>
+            <a href="./amerika.html">Amerika</a>
+            <a href="./arlista.html">Árlista</a>
+            <a href="./foglalas.html">Utazás Foglalása</a>
+        </div>
+        <a  href="./index.html">Home</a>
+        <div class="right-nav">
+            <a type="button" class="toggleicon" onclick="lightswitch()"><img id="icon" src="light-mode-toggle-icon.png" alt=""></a>
+            <a href="contact">Kapcsolat</a>
+        </div>
     </nav>
 </body>
 </html>

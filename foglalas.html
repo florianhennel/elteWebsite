@@ -11,17 +11,58 @@
 </head>
 <body onload="setcss()">
     <nav>
-        <ul>
-            <li><a  href="./index.html" class="font-effect-fire" >Home</a></li>
-            <li><a href="./europa.html">Európa</a></li>
-            <li><a href="./azsia.html">Ázsia</a></li>
-            <li><a href="./amerika.html">Amerika</a></li>
-            <li><a href="./arlista.html">Árlista</a></li>
-            <li><a href="./foglalas.html">Utazás Foglalása</a></li>
-            <li style="float:right;"><a type="button" class="toggleicon" onclick="lightswitch()"><img id="icon" src="light-mode-toggle-icon.png" alt=""></a></li>
-            <li style="float:right;"><a href="contact">Kapcsolat</a></li>
-            
-        </ul>
+        <div class="centered-nav">
+            <a href="./europa.html">Európa</a>
+            <a href="./azsia.html">Ázsia</a>
+            <a href="./amerika.html">Amerika</a>
+            <a href="./arlista.html">Árlista</a>
+            <a href="./foglalas.html" class="font-effect-neon">Utazás Foglalása</a>
+        </div>
+        <a  href="./index.html">Home</a>
+        <div class="right-nav">
+            <a type="button" class="toggleicon" onclick="lightswitch()"><img id="icon" src="light-mode-toggle-icon.png" alt=""></a>
+            <a href="contact">Kapcsolat</a>
+        </div>
     </nav>
+    <main>
+        <form action="email" method="POST">
+            <fieldset>
+                <legend>Utazás</legend>
+
+                <label for="hova">Hova</label><br>
+                <input type="text" id="hova"><br>
+
+                <label for="mikor">Mikor</label><br>
+                <input type="date" id="mikor"><br>
+
+                <label for="luxus">Milyen osztályon szeretne repülni?</label><br>
+                <input type="radio" id="turista" name="flight" value="turista">
+                <label for="turista">Turista osztály</label><br>
+                
+                <input type="radio" id="buisness" name="flight" value="buisness">
+                <label for="buisness">Buisness osztály</label><br>
+                
+                <input type="radio" id="elso" name="flight" value="elso">
+                <label for="elso">Első osztály</label><br>
+
+            </fieldset>
+            <fieldset>
+                <legend>Adatok</legend>
+                <label for="nev">Név</label><br>
+                <input type="text" id="nev" required><br>
+
+                <label for="email">Email-cím:</label><br>
+                <input type="email" id="email" required><br>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Adatok elküldése</legend>
+            
+            <input type="submit" name="" id="">
+            <input type="reset">
+        </fieldset>
+        </form>
+    </main>
 </body>
 </html>
