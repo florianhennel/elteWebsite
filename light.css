@@ -1,59 +1,59 @@
 body{
-    margin: 0;
-    
+  margin: 0;
 }
 header{
-    margin:0;
+  margin:0;
+  width: 100%;
+  background-color:floralwhite;
+  display:flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0;
 }
-nav div a{
-    text-decoration: none;
-    color: black;
-    display: block;
-    text-align: center;
-    padding: 10px 15px;
-    font-size: 17px;
-    font-family: Audiowide, sans-serif;
-    
-}
-nav {
-  position: relative;
-  background-color: #666;
-  overflow: hidden;
-}
-nav a {
-  float: left;
+nav ul li,header a{
+  display: inline-block;
   color: black;
   text-align: center;
   padding: 10px 15px;
   text-decoration: none;
+  list-style: none;
   font-size: 17px;
   font-family: Audiowide, sans-serif;
 }
-
+nav ul{
+  margin: 0;
+  padding-left: 0;
+}
+nav ul li a{
+  text-decoration: none;
+  color: rgba(0,0,0,1);
+}
+.font-effect-fire{
+  font-size: 17px;
+  font-family: Audiowide, sans-serif;
+  text-decoration: none;
+}
 .centered-nav{
-    float:none;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+  float:none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
-.right-nav{
-    float:right;
+nav ul li a:hover{
+  transform: scale(1.3);
 }
-nav div a:hover:not(.font-effect-fire,.font-effect-neon,.toggleicon){
-    background-color: #333;
-    color: white;
-}
-nav a:hover:not(.font-effect-fire){
-  background-color: #333;
-  color: white;
+.home:hover{
+  transform: scale(1.3);
 }
 .toggleicon:hover{
   cursor: pointer;
-  background-color: #555;
+  transform: scale(1.3);
 }
  #icon{
-  height: 17px;
+  height: 25px;
+  padding-right: 20px;
  }
  main{
   display:flex;
@@ -64,4 +64,13 @@ nav a:hover:not(.font-effect-fire){
   width: 100%;
   border: #333 solid 1px;
   border-radius: 5px;
+ }
+ .main_kep{
+  width: 100%;
+  height: 100vw;
+  background-image: url("nyaralas.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
  }
