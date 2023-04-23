@@ -1,17 +1,19 @@
-body{
+body {
   margin: 0;
 }
-header{
-  margin:0;
+header {
+  margin: 0;
   width: 100%;
-  background-color:floralwhite;
-  display:flex;
+  background-color: floralwhite;
+  display: flex;
   position: fixed;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px 0;
+  margin-bottom: 62px;
 }
-nav ul li,header a{
+nav ul li,
+header a {
   display: inline-block;
   color: black;
   text-align: center;
@@ -21,37 +23,40 @@ nav ul li,header a{
   font-size: 17px;
   font-family: Audiowide, sans-serif;
 }
-nav ul{
+nav ul {
   margin: 0;
   padding-left: 0;
 }
-nav ul li a{
+nav ul li a {
   text-decoration: none;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
 }
 
-nav ul li a:hover,.home:hover,.toggleicon:hover{
+nav ul li a:hover,
+.home:hover,
+.toggleicon:hover {
   transform: scale(1.3);
   cursor: pointer;
 }
- #icon{
+#icon {
   height: 25px;
   padding-right: 20px;
- }
- main{
-  display:flex;
+}
+main {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color:lightcyan;
- }
- fieldset{
+  background-color: lightcyan;
+  padding-top: 62px;
+}
+fieldset {
   text-align: center;
   width: 100%;
   border: #333 solid 1px;
   border-radius: 5px;
- }
- .main_kep{
+}
+.main_kep {
   display: flex;
   width: 100%;
   height: 40vw;
@@ -60,58 +65,120 @@ nav ul li a:hover,.home:hover,.toggleicon:hover{
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: end;
- }
- .main_kep p {
-  background-color: rgba(0,0,0,0.85);
-  color:aliceblue;
-  font-size: 5rem;
+}
+.main_kep p {
+  background-color: rgba(0, 0, 0, 0.65);
+  color: aliceblue;
+  font-size: 2rem;
   align-self: center;
-  margin-top:15%;
+  margin-top: 15%;
   margin-right: 10%;
- }
- main label{
+  width: 40%;
+}
+main label {
   margin-right: 50vw;
   font-size: 3em;
- }
- main section{
+}
+main section {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   width: 60%;
   margin: 3vh;
- }
- main section article{
+}
+main section article {
   display: grid;
   grid-template-columns: auto auto;
   margin: 5%;
- }
- article h2{
+}
+.hir h2 {
   font-size: 1.7rem;
- }
- article p{
+}
+.hir p {
   margin: 0;
   font-size: 1.3rem;
- }
- .hir img{
+}
+.hir img {
   width: 90%;
-  align-self:center ;
+  align-self: center;
   grid-row: 1 / 3;
- }
- video{
+}
+video {
   margin: 5%;
   width: 100%;
- }
- footer{
-  background-color:floralwhite;
+}
+footer {
+  background-color: floralwhite;
   font-family: Audiowide, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
- }
- footer ul{
+}
+footer ul {
   list-style-type: none;
- }
- footer li{
+}
+footer li {
   padding: 10px;
- }
+}
+.kategoriak {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.kategoriak div {
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25%;
+}
+.kategoriak div:hover{
+  cursor: pointer;
+}
+.kategoriak p{
+  visibility:visible;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: aliceblue;
+  font-size: 1rem;
+}
+.kategoriak h2{
+  color: aliceblue;
+}
+.kategoriak a{
+  text-decoration: none;
+}
+.ajanlatok img{
+  width: 90%;
+  align-self: center;
+  grid-row: 1 / 3;
+}
+.ajanlatok h2 {
+  font-size: 1.7rem;
+}
+.ajanlatok p {
+  margin: 0;
+  font-size: 1.3rem;
+}
+.reszletek{
+  grid-column: 1 / 3;
+  text-decoration: none;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.reszletek a{
+  border: 1px solid black;
+  text-align: center;
+  align-items: center;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  width: 10rem;
+  background-color:gold ;
+}
