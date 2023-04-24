@@ -1,26 +1,154 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ázsiai utak</title>
-    <link id="css" rel="stylesheet" href="light.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire|neon">
+    <link id="css" rel="stylesheet" href="light.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire|neon"
+    />
     <script src="scripts.js"></script>
-</head>
-<body onload = "setcss()">
+  </head>
+  <body onload="setcss()">
     <header>
-        <a href="./index.html" class="home">Főoldal</a>
-        <nav>
-            <ul>
-                <li><a href="./kulfold.html">Külföldi utak</a></li>
-                <li><a href="./belfold.html">Belföldi utak</a></li>
-                <li><a href="./foglalas.html">Utazás Foglalása</a></li>
-                <li><a href="contact">Kapcsolat</a></li>
-            </ul>
-        </nav>
-        <a type="button" class="toggleicon" onclick="lightswitch()"><img id="icon" src="light-mode-toggle-icon.png" alt=""></a>
+      <a href="./index.html" class="home">Főoldal</a>
+      <nav>
+        <ul>
+          <li><a href="./kulfold.html">Külföldi utak</a></li>
+          <li><a href="./belfold.html">Belföldi utak</a></li>
+          <li><a href="./foglalas.html">Utazás Foglalása</a></li>
+          <li><a href="contact">Kapcsolat</a></li>
+        </ul>
+      </nav>
+      <a type="button" class="toggleicon" onclick="lightswitch()"
+        ><img id="icon" src="light-mode-toggle-icon.png" alt=""
+      /></a>
     </header>
-</body>
+    <main>
+      <section class="kategoriak">
+        <div style="background-image: url(kepek/dunantul.jpg)">
+          <a href="#dunantul"
+            ><h2>Dunántúl</h2>
+            <p>
+              Látogasson el a Dunántúlra, és fedezze fel Magyarország történelmi
+              és természeti kincseit! Csodálja meg a gyönyörű hegyvidékeket,
+              kiránduljon a festői völgyekben, és kóstolja meg a helyi
+              ínyencségeket. Élvezze a természet nyugalmát és a kulturális
+              programokat egyaránt a Dunántúlon!
+            </p></a
+          >
+        </div>
+
+        <div style="background-image: url(kepek/alfold.jpg)">
+          <a href="#alfold"
+            ><h2>Alföld</h2>
+            <p>
+              Szeretne elvonulni a város zajától? Látogasson el az Alföldre, és
+              fedezze fel a magyar pusztát és a Hortobágyi Nemzeti Park
+              varázslatos tájait! Kóstolja meg a híres hajdúsági kolbászt, és
+              ismerje meg a régió hagyományait. Élje át az alföldi életérzést,
+              és töltsön el egy felejthetetlen nyaralást ezen a vidéken!
+            </p>
+          </a>
+        </div>
+
+        <div style="background-image: url(kepek/balaton.jpg)">
+          <a href="#balaton"
+            ><h2>Balaton</h2>
+            <p>
+              A Balaton az egyik legnépszerűbb üdülőhely Magyarországon, és nem
+              véletlenül! Élvezze a tó kristálytiszta vizét, pihenjen a homokos
+              strandokon, és fedezze fel a Balaton-felvidék kulturális és
+              természeti kincseit. Válasszon a számtalan program közül, és
+              töltsön el egy felejthetetlen nyaralást a Balatonnál!
+            </p></a
+          >
+          >
+        </div>
+
+        <div style="background-image: url(kepek/tiszantul.jpg)">
+          <a href="#tiszantul"
+            ><h2>Tiszántúl</h2>
+            <p>
+              Látogasson el a Tiszántúlra, és ismerje meg Magyarország keleti
+              régióját! Csodálja meg a Hortobágyi Nemzeti Parkot, a Tisza-tavat
+              és a tokaji borvidéket. Fedezze fel a régió kulturális és
+              történelmi örökségeit, és kóstolja meg a helyi gasztronómiát!
+              Töltsön el egy izgalmas és kalandos nyaralást a Tiszántúlon!
+            </p></a
+          >
+          >
+        </div>
+      </section>
+      <hr width="75%" />
+      <section class="ajanlatok">
+        <label for="" id="dunantul">Dunántúli utak</label>
+        <article>
+          <img src="./kepek/Pécs.png" alt="" />
+          <h2>Pécs</h2>
+          <p>
+            Fedezd fel Pécs kulturális kincseit és varázslatos belvárosát! Élvezd a mediterrán hangulatot a Széchenyi téren vagy sétálj az UNESCO világörökségi helyszíneken. Számos múzeum és műemlék vár rád, ne hagyd ki a Zsolnay Kulturális Negyedet sem!
+          </p>
+          <div class="reszletek"><a href="">Foglalás</a></div>
+        </article>
+        <article>
+          <img src="./kepek/Villány.jpg" alt="" />
+          <h2>Villány</h2>
+          <p>
+            Borbarátok figyelem! Látogass el Villányba, és kóstold meg a régió világhírű borait! A gyönyörű táj és a kiváló minőségű borok garantáltan elvarázsolnak. Kirándulj a Szársomlyó-hegyre, vagy kerékpározz végig a Villányi borúton!
+          </p>
+          <div class="reszletek"><a href="">Foglalás</a></div>
+        </article>
+        <hr width="50%" />
+        <label for="" id="alfold">Alföldi utak</label>
+        <article>
+          <img src="./kepek/Szeged.jpg" alt="" />
+          <h2>Szeged</h2>
+          <p>
+            Csodálkozz Szeged gyönyörű szecessziós épületein és ne hagyd ki a Tiszát sem! Sétálj az élménydús belvárosban és kóstold meg a híres szegedi halászlét. Látogass el a Dóm térre, ahol az ország egyik legszebb katedrálisa áll, vagy fedezd fel a Móra Ferenc Múzeumot!
+          </p>
+          <div class="reszletek"><a href="">Foglalás</a></div>
+        </article>
+        <article>
+            <img src="./kepek/Hortobágy.jpg" alt="" />
+            <h2>Hortobágy</h2>
+            <p>
+              Hortobágy a magyar puszták legnagyobb területű és legszebb tájai közé tartozik. A Hortobágyi Nemzeti Parkban az eredeti állatvilág és a tradicionális pásztorkodás elevenedik meg. A terület számos kirándulási és túrázási lehetőséget kínál a természet szerelmeseinek.
+            </p>
+            <div class="reszletek"><a href="">Foglalás</a></div>
+          </article>
+          <hr width="50%" />
+        <label for="" id="balaton">Balatoni utak</label>
+        <article>
+          <img src="./kepek/Siófok.jpg" alt="" />
+          <h2>Siófok</h2>
+          <p>
+            Siófok, a Balaton fővárosa minden évben több ezer turistát vonz az ország minden pontjáról. A város számos lehetőséget kínál az aktív kikapcsolódásra: szörfözés, vitorlázás, kerékpározás és még sok más sportág. Siófok a vidám nyári életéről ismert, ahol éjszakánként a számos bár és éjszakai klub garantálja az örömteli szórakozást.
+          </p>
+          <div class="reszletek"><a href="">Foglalás</a></div>
+        </article>
+        <article>
+          <img src="./kepek/Tihany.jpg" alt="" />
+          <h2>Tihany</h2>
+          <p>
+            Tihany a Balaton egyik legszebb és leglátogatottabb helyszíne, amelyet a középkori apátság és a hozzá kapcsolódó múzeumok tesznek igazán különlegessé. A település különlegessége a Tihanyi-félsziget, ahol a látnivalók mellett csodálatos panoráma és remek kirándulási lehetőségek várják az ideérkezőket.
+          </p>
+          <div class="reszletek"><a href="">Foglalás</a></div>
+        </article>
+        <hr width="50%" />
+        <label for="" id="tiszantul">Tiszántúli utak</label>
+        <article>
+          <img src="./kepek//Debrecen.jpg" alt="" />
+          <h2>Debrecen</h2>
+          <p>
+            Debrecen a második legnagyobb város Magyarországon, amely kulturális és történelmi látnivalói miatt vonzó célpont a turisták számára. A városban található a Nagytemplom, amely a magyar protestantizmus egyik jelentős épülete, valamint számos múzeum és műemlék. Debrecen emellett híres gasztronómiai kínálatáról és virágzó kulturális életéről is.
+          </p>
+          <div class="reszletek"><a href="">Foglalás</a></div>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
