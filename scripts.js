@@ -1,3 +1,21 @@
+function setPage(){
+    setcss();
+    if(localStorage.getItem("varos") != null){setVaros();}
+    document.getElementById("hova").addEventListener("input",showPrices());
+
+}
+function showPrices(){
+    console.log("input change");
+    const hova = document.getElementById("hova").getAttribute("value");
+    const varosok = [];
+    Array.from(document.getElementsByTagName("option")).forEach(element => {varosok.push(element.value)});
+    const sorok = Array.from(document.getElementsByTagName("tr"));
+    for (let index = 0; index < varosok.length; index++) {
+        if (varosok[index] == hova) {
+            sorok[index+1].style.border = "solid 2px red";
+        }
+    }
+}
 function setcss() {
     if (localStorage.getItem('theme') == "light.css") {
         var element = document.getElementById('css');
@@ -55,4 +73,14 @@ function lightswitch() {
         localStorage.setItem('theme','light.css');
         icon.setAttribute('src',"light-mode-toggle-icon.png");
     }
+}
+function foglal(hol){
+    localStorage.setItem("varos",hol);
+    window.location.href="foglalas.html";
+}
+function setVaros(){
+    const varos = localStorage.getItem("varos");
+    const hova = document.getElementById("hova");
+    hova.setAttribute("value",varos);
+    localStorage.removeItem("varos");
 }
