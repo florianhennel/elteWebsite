@@ -20,63 +20,58 @@
                 <li><a href="#contact">Kapcsolat</a></li>
             </ul>
         </nav>
-        <a type="button" class="toggleicon" onclick="lightswitch()"><img id="icon" src="light-mode-toggle-icon.png" alt=""></a>
+        <a type="button" class="toggleicon" onclick="lightswitch()"><img id="icon" src="kepek/light-mode-toggle-icon.png" alt=""></a>
     </header>
     <main>
         <div class="form_arak">
         <form action="email" method="POST">
             <fieldset>
                 <legend>Úticél</legend>
-
                 <label for="hova">Hova</label><br>
-                <input list="varosok" id="hova" value=""><br>
-                
-                <datalist id="varosok">
-                    <option value="Róma"></option>
-                    <option value="Barcelona"></option>
-                    <option value="Tokyo"></option>
-                    <option value="Bangkok"></option>
-                    <option value="Hawaii"></option>
-                    <option value="New York"></option>
-                    <option value="Madagaszkár"></option>
-                    <option value="Sydney"></option>
-                    <option value="Pécs"></option>
-                    <option value="Villány"></option>
-                    <option value="Szeged"></option>
-                    <option value="Hortobágy"></option>
-                    <option value="Siófok"></option>
-                    <option value="Tihany"></option>
-                    <option value="Debrecen"></option>
-                </datalist>
+                <select name="varos" id="hova" value="" onclick="showPrices()" required>
+                    <option value=""></option>
+                    <option value="Róma">Róma</option>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Tokyo">Tokyo</option>
+                    <option value="Bangkok">Bangkok</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="New York">New York</option>
+                    <option value="Madagaszkár">Madagaszkár</option>
+                    <option value="Sydney">Sydney</option>
+                    <option value="Pécs">Pécs</option>
+                    <option value="Villány">Villány</option>
+                    <option value="Szeged">Szeged</option>
+                    <option value="Hortobágy">Hortobágy</option>
+                    <option value="Siófok">Siófok</option>
+                    <option value="Tihany">Tihany</option>
+                    <option value="Debrecen">Debrecen</option>
+                </select><br>
 
-                <label for="mikor">Mettől</label><br>
-                <input type="date" id="mikor"><br>
+                <label for="mettol">Mettől -</label>
+                <label for="meddig">Meddig</label><br>
 
-                <label for="mikor">Meddig</label><br>
-                <input type="date" id="mikor"><br>
+                <input onclick="payAll()" type="date" id="mettol">
+                <input onclick="payAll()" type="date" id="meddig"><br>
 
             </fieldset>
             <fieldset>
                 <legend>Utasok</legend>
                 <label for="utas">Felnőtt utasok</label>
-                <input type="number" name="felnott_utas" id="felnott" max="10" value="0">
+                <input onclick="payAll()" type="number" name="felnott_utas" id="felnott" max="10" value="0">
                 <br>
                 <label for="gyerek">Gyerek utasok</label>
-                <input type="number" name="gyerek_utas" id="gyerek" max="10" value="0">
+                <input onclick="payAll()" type="number" name="gyerek_utas" id="gyerek" max="10" value="0">
             </fieldset>
             
             <fieldset>
                 <legend>Szállás és utazás</legend>
 
                 <label for="utazas">Mivel szeretne utazni?</label><br>
-                <input type="radio" name="utazas" id="busz" value="Busz">
+                <input onclick="payAll()" type="radio" name="utazas" id="busz" value="Busz">
                 <label for="busz">Busz</label>
-                <input type="radio" name="utazas" id="repulo" value="Repülő">
+                <input onclick="payAll()" type="radio" name="utazas" id="repulo" value="Repülő">
                 <label for="repulo">Repülő</label>
                 <br>
-
-                <label for="szallas">Szeretne szállást is foglalni?</label><br>
-                <input type="checkbox" id="szallas"><br>
 
                 <label for="hotel">Hány csillagos hotelben?</label><br>
                 <input type="radio" name="hotel" id="1*"><label for="1*">1*</label>
@@ -118,10 +113,12 @@
         </form>
         <div class="arak">
             <table>
+                <tr>
                 <th>Úticél</th>
                 <th>Gyerek: Ft/éj</th>
                 <th>Felnőtt: Ft/éj</th>
                 <th class="repuloar">Repülés ára</th>
+                </tr>
                 <tr>
                     <td>Róma</td>
                     <td>20.000</td>
@@ -204,6 +201,11 @@
                     <td>Debrecen</td>
                     <td>7.000</td>
                     <td>14.000</td>
+                </tr>
+                <tr>
+                    <td>Összesen:</td>
+                    <td id="utasok"></td>
+                    <td id="osszeg"></td>
                 </tr>
             </table>
         </div>
