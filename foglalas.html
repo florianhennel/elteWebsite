@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utazás Foglalása</title>
-    <link id="css" rel="stylesheet" href="light.css">
+    <title>Utazási Iroda - Foglalás</title>
+    <link id="css" rel="stylesheet" href="normal.css">
+    <link rel="stylesheet" href="nyomtatas.css" media="print" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire|neon">
     <script src="scripts.js"></script>
 </head>
 <body onload="setPage()">
     <header>
-        <a href="./index.html" class="home">Főoldal</a>
+        <button type="button" onclick="mobileNav()" class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
         <nav>
-            <ul>
+            <ul id="navigation" data-visible="false">
+                <li><a href="./index.html" class="home" >Főoldal</a></li>
                 <li><a href="./kulfold.html">Külföldi utak</a></li>
                 <li><a href="./belfold.html">Belföldi utak</a></li>
-                <li><a href="./foglalas.html">Utazás Foglalása</a></li>
-                <li><a href="#contact">Kapcsolat</a></li>
+                <li><a href="./foglalas.html" style="color:gold;">Utazás Foglalása</a></li>
+                <li><a type="button" class="toggleicon" onclick="nagybetus()"><img id="icon" src="kepek/light-mode-toggle-icon.png" alt="betumeret"></a></li>
             </ul>
         </nav>
-        <a type="button" class="toggleicon" onclick="lightswitch()"><img id="icon" src="kepek/light-mode-toggle-icon.png" alt=""></a>
+        
+        
     </header>
     <main>
         <div class="form_arak">
-        <form action="email" method="POST">
+        <form action="mailto:sj2afp@inf.elte.hu" method="POST" enctype="text/plain">
             <fieldset>
                 <legend>Úticél</legend>
                 <label for="hova">Hova</label><br>
@@ -50,8 +53,8 @@
                 <label for="mettol">Mettől -</label>
                 <label for="meddig">Meddig</label><br>
 
-                <input onclick="payAll()" type="date" id="mettol">
-                <input onclick="payAll()" type="date" id="meddig"><br>
+                <input onclick="payAll()" type="date" id="mettol" name="Datum_kezd">
+                <input onclick="payAll()" type="date" id="meddig" name="Datum_veg"><br>
 
             </fieldset>
             <fieldset>
@@ -69,50 +72,48 @@
                 <label for="utazas">Mivel szeretne utazni?</label><br>
                 <input onclick="payAll()" type="radio" name="utazas" id="busz" value="Busz">
                 <label for="busz">Busz</label>
-                <input onclick="payAll()" type="radio" name="utazas" id="repulo" value="Repülő">
+                <input onclick="payAll()" type="radio" name="utazas" id="repulo" value="Repulo">
                 <label for="repulo">Repülő</label>
                 <br>
 
                 <label for="hotel">Hány csillagos hotelben?</label><br>
-                <input type="radio" name="hotel" id="1*"><label for="1*">1*</label>
-                <input type="radio" name="hotel" id="2*"><label for="2*">2*</label>
-                <input type="radio" name="hotel" id="3*"><label for="3*">3*</label>
-                <input type="radio" name="hotel" id="4*"><label for="4*">4*</label>
-                <input type="radio" name="hotel" id="5*"><label for="5*">5*</label>
+                <input type="radio" name="hotel" id="1*" value="1*"><label for="1*">1*</label>
+                <input type="radio" name="hotel" id="2*" value="2*"><label for="2*">2*</label>
+                <input type="radio" name="hotel" id="3*" value="3*" checked><label for="3*">3*</label>
+                <input type="radio" name="hotel" id="4*" value="4*"><label for="4*">4*</label>
+                <input type="radio" name="hotel" id="5*" value="5*"><label for="5*" >5*</label>
                 <br>
-
             </fieldset><br>
-            <button>Árak kiszámítása:</button>
             <fieldset>
                 <legend>Adatok</legend>
                 <label for="nev">Név:</label><br>
-                <input type="text" id="nev" required><br>
+                <input type="text" id="nev" name="nev" minlength="3" maxlength="20" required><br>
 
-                <label for="email">Email-cím:</label><br>
-                <input type="email" id="email" required><br>
+                <label for="email" >Email-cím:</label><br>
+                <input type="email" id="email" minlength="3" name="email" maxlength="30" required><br>
                 <label for="ad" id="ad">Küldhetünk e önnek értesítést ajánlatainkról emailben?:</label>
-                <input type="checkbox" id="ad"><br>
+                <input type="checkbox" id="ad" name="ajanlatok" value="igen"><br>
 
 
                 <label for="email">Telefonszám:</label><br>
-                <input type="text" id="telefon" required><br>
+                <input type="text" id="telefon" name="telefon" maxlength="12" required><br>
 
                 <label for="egyeb">Egyéb megjegyzés az utazás kapcsán:</label><br>
-                <textarea name="megjegyzes" id="egyeb" cols="30" rows="10"></textarea>
-
-
+                <textarea name="megjegyzes" id="egyeb" cols="30" rows="10" maxlength="300"></textarea>
             </fieldset>
             <fieldset style=" display:flex;justify-content:space-evenly">
                 <legend>Adatok elküldése</legend>
-
-            <input type="reset">
-            <input type="submit" name="" id="">
-            
-            
+            <input type="submit" value="Elküld">
+            <input type="reset" value="Töröl">
         </fieldset>
         </form>
-        <div class="arak">
+        <aside class="arak">
             <table>
+                <caption>
+                <details>
+                    <summary>Árak</summary>
+                    <p>Az árak kiszámítását javascript kód végzi, figyelembe veszi a a táblázat árait és a form által bejelölt adatokat. </p>
+                </details></caption>
                 <tr>
                 <th>Úticél</th>
                 <th>Gyerek: Ft/éj</th>
@@ -208,25 +209,39 @@
                     <td id="osszeg"></td>
                 </tr>
             </table>
-        </div>
+        </aside>
         </div>
     </main>
     <footer id="contact">
-        <div class="links">
+        <div>
+            <h1>Hírek</h1>
             <ul>
-                <li>Külföldi utak</li>
-                <li>Belföldi utak</li>
-                <li>Utazás foglalása</li>
+                <li>Olaszország</li>
+                <li>Japán</li>
+                <li>Egyesült Arab Emírségek</li>
+                <li>Videós hír</li>
             </ul>
         </div>
         <div class="links">
+            <h1>Linkek</h1>
             <ul>
-                <li>Európa</li>
-                <li>Amerika</li>
-                <li>Magyarország</li>
+                <li><a href="kulfold.html#eu"> Európa </a></li>
+                <li><a href="kulfold.html#america"> Amerika </a></li>
+                <li><a href="kulfold.html#asia"> Ázsia </a></li>
+                <li><a href="belfold.html"> Magyarország </a></li>
+            </ul>
+        </div>
+        <div>
+            <h1>Támogatóink</h1>
+            <ul>
+                <li><a href="https://www.otpbank.hu" target="_blank">OTP Bank</a></li>
+                <li><a href="https://www.trivago.hu" target="_blank">Trivago</a></li>
+                <li><a href="https://www.mavcsoport.hu" target="_blank">MÁV Zrt.</a></li>
+                <li><a href="https://wizzair.com/hu-hu#/" target="_blank">Wizz Air</a></li>
             </ul>
         </div>
         <div class="adress">
+            <h1>Kapcsolat</h1>
             <ul>
                 <li>1111. Budapest Malom utca 5.</li>
                 <li>+36 20 437 9625</li>

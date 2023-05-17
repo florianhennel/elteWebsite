@@ -1,0 +1,429 @@
+body {
+  margin: 0;
+  min-width: 375px;
+}
+header,.header {
+  top: 0;
+  width: 100%;
+  background-color: darkseagreen;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  /*padding: 0 20px 0;*/
+}
+nav,.nav {
+  width: 100%;
+}
+nav ul ,.nav ul{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+}
+nav ul li,
+header a , .nav ul li,.header a{
+  color: darkslategray;
+  text-align: center;
+  padding: 1% 0.9rem;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.3rem;
+  font-family: Audiowide, sans-serif;
+}
+nav li:hover,
+nav li:active,
+.home:hover,
+.toggleicon:hover,
+.nav li:hover {
+  text-decoration: solid;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+.mobile-nav-toggle {
+  display: none;
+}
+#icon {
+  height: 25px;
+}
+main,.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightcyan;
+  margin-top: 50px;
+  width: 100%;
+  min-height: 100vh;
+}
+.main div, .main video{
+  width: 60%;
+  text-align: justify;
+  background-color: lightcyan;
+  font-size: 1.3rem;
+}
+fieldset {
+  text-align: center;
+  width: 100%;
+  border: #333 solid 1px;
+  border-radius: 5px;
+}
+.main_kep {
+  display: flex;
+  width: 100%;
+  height: 40vw;
+  background-image: url("kepek/nyaralas.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main_kep p {
+  color: darkgreen;
+  font-size: 100%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-transform: uppercase;
+  text-shadow: #333;
+  font-size: 1.7rem;
+}
+.ajanlatok h1{
+  margin-right: 50vw;
+  font-size: 3em;
+  margin-top: 62px;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 3vh;
+}
+main section article {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 5%;
+}
+.hir h2 {
+  font-size: 1.7rem;
+}
+.hir p {
+  margin: 0;
+  font-size: 1.3rem;
+}
+.hir figure {
+  align-self: center;
+  grid-row: 1 / 3;
+}
+.hir figure img{
+  width: 90%;
+}
+video {
+  margin: 5%;
+  width: 100%;
+}
+footer,#footer {
+  background-color: darkseagreen;
+  font-family: Audiowide, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10%;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+}
+  a
+footer h1,#footer h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+footer ul,#footer ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+}
+footer li, #footer li{
+  padding: 10px;
+  color: darkslategrey;
+}
+footer li a ,#footer li a{
+  text-decoration: underline;
+  color: initial;
+}
+footer li a:visited,#footer li a:visited {
+  color: chartreuse;
+}
+.kategoriak {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.kategoriak div {
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25%;
+}
+.kategoriak p {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: aliceblue;
+  font-size: 1rem;
+}
+.kategoriak div:hover .child {
+  visibility: visible;
+  cursor: pointer;
+}
+.kategoriak h1 {
+  color: aliceblue;
+}
+.kategoriak a {
+  text-decoration: none;
+}
+.ajanlatok a {
+  width: 50%;
+  align-self: center;
+  grid-row: 1 / 3;
+}
+.ajanlatok a img {
+  object-fit: cover;
+  max-width: 150%;
+}
+.ajanlatok a img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.ajanlatok h2 {
+  font-size: 1.7rem;
+}
+.ajanlatok p {
+  margin: 0;
+  font-size: 1.3rem;
+}
+.reszletek {
+  grid-column: 1 / 3;
+  text-decoration: none;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.reszletek a {
+  border: 1px solid black;
+  text-align: center;
+  align-items: center;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  font-style: italic;
+  cursor: pointer;
+  width: 10rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  background-color: gold;
+  line-height: 2rem;
+}
+.top_scroll {
+  text-decoration: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 155px;
+}
+.top_scroll img {
+  width: 30%;
+}
+form label {
+  margin: auto;
+  font-size: 1.7rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 30vw;
+}
+form fieldset {
+  background-color: skyblue;
+}
+#felnott,
+#gyerek {
+  width: 10%;
+}
+#ad {
+  font-size: 0.8em;
+}
+.form_arak {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+}
+.arak table,
+th,
+tr,
+td {
+  margin: 1rem;
+  background-color: skyblue;
+  font-size: 1.5rem;
+  padding: 5px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: justify;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+details p {
+  font-size: 1rem;
+}
+.repuloar {
+  display: none;
+}
+.vid a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (max-width: 1400px) {
+  main section {
+    width: 70%;
+  }
+  .hir {
+    grid-template-columns: auto auto;
+  }
+  .hir p {
+    grid-column: 1/3;
+  }
+}
+@media screen and (max-width: 950px) {
+  .toggleicon {
+    display: none;
+  }
+  footer,#footer {
+    gap: 0;
+  }
+  main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 3vh;
+  }
+  .main div{
+    width: 70%;
+  }
+  .ajanlatok h1,
+  main h1 {
+    font-size: 3em;
+  }
+  .form_arak {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  form {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 756px) {
+  nav ul,.nav ul {
+    position: fixed;
+    flex-direction: column;
+    inset: 0 0 60% 0;
+    width: 50%;
+    background-color: darkseagreen;
+    z-index: 1000;
+    transform: translateX(-100%);
+  }
+  #navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+  main,.main {
+    margin-top: 0;
+  }
+  nav ul li,.nav ul li,
+  header a,.header a {
+    color: darkslategray;
+    text-align: center;
+    padding: 0.9rem;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.3rem;
+    font-family: Audiowide, sans-serif;
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    border: none;
+    background: url("kepek/menu.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 3rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    left: 2rem;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+  }
+  .kategoriak {
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .kategoriak div {
+    width: 50%;
+    aspect-ratio: 1/1.5;
+    background-position: center;
+    background-size: cover;
+  }
+  .ajanlatok img {
+    display: none;
+  }
+  .ajanlatok article {
+    grid-template-columns: auto;
+  }
+  .ajanlatok h1{
+    margin: 0;
+  }
+  main section,.main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  main section article {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 5%;
+  }
+  .hir figure {
+    display: none;
+  }
+  footer,#footer {
+    flex-direction: column;
+  }
+  .top_scroll {
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;
+    right: 25%;
+    margin-bottom: 155px;
+  }
+  .top_scroll img {
+    width: 25%;
+  }
+}

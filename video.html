@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu" lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utaszási Iroda - Főoldal</title>
+    <script src="scripts.js" type ="text/javascript">
+        document.onload = "setcss()";
+    </script>
+    <link id="css" rel="stylesheet" href="normal.css" />
+    <link rel="stylesheet" href="nyomtatas.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css' rel='stylesheet' />
+</head>
+<body>
+    <div class="header">
+        <button type="button" onclick="mobileNav()" class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
+        <div class="nav">
+            <ul id="navigation" data-visible="false">
+                <li><a href="./index.html" class="home" style="color:gold;">Főoldal</a></li>
+                <li><a href="./kulfold.html">Külföldi utak</a></li>
+                <li><a href="./belfold.html">Belföldi utak</a></li>
+                <li><a href="./foglalas.html">Utazás Foglalása</a></li>
+                <li><a type="button" class="toggleicon" onclick="lightswitch()"><img id="icon" src="kepek/light-mode-toggle-icon.png" alt=""></li></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <video poster="kepek/beach.png" controls>
+                <source src="kepek/video.mp4" />
+        </video>
+        <div class="beszamolo">
+            
+            <p>San Diego partjai, a dél-kaliforniai festői partszakaszon találhatóak, lenyűgöző úticélként szolgálnak, és 2023-ban is a legjobb strandnak számítanak. San Diego partjai tökéletesen ötvözik a homokos partok és az óceán nyújtotta szépséget. A város híres a mérsékelt klímájáról és a napsütéses időjárásról, amely lehetővé teszi, hogy a látogatók szinte egész évben élvezhessék a strandolás örömeit.</p>
+
+<p>San Diego strandjai változatosak és lenyűgözőek. Mission Beach nyüzsgő hangulata, Pacific Beach szörfös paradicsoma és La Jolla tengeri barlangjai mind-mind különleges élményeket kínálnak a látogatóknak. A homokos partok tágasak és rendezettek, és a kristálytiszta óceán vízében fürdőzve felüdülést nyújtanak a forró nyári napokon.</p>
+
+<p>San Diego partjai azért tartják magukat a legjobb strandnak, mert nem csak a kiváló infrastruktúrájukkal és szolgáltatásaikkal, hanem a természeti szépségükkel is elkápráztatják a látogatókat. A part menti sétányok, a strand melletti éttermek és üzletek, valamint a különféle vízi sportok lehetőségei mind hozzájárulnak a hely varázsához.</p>
+
+<p>Emellett San Diego partjai közelsége más turisztikai látnivalókhoz, például a Gaslamp negyedhez vagy a Balboa Parkhoz, tovább növelik vonzerejüket. Összességében San Diego partjai ideális helyszínt kínálnak a pihenésre, a szórakozásra és az aktív életmód szerelmeseinek. Nem véletlen, hogy 2023-ban is a legjobb strandnak tartják őket.</p>
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            <h1>Hírek</h1>
+            <ul>
+                <li><a href="">Olaszország </a></li>
+                <li><a href="">Japán</a></li>
+                <li><a href="">Arab Emírségek</a></li>
+                <li><a href="">Videós hír</a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <h1>Linkek</h1>
+            <ul>
+                <li><a href="kulfold.html#eu"> Európa </a></li>
+                <li><a href="kulfold.html#america"> Amerika </a></li>
+                <li><a href="kulfold.html#asia"> Ázsia </a></li>
+                <li><a href="belfold.html"> Magyarország </a></li>
+            </ul>
+        </div>
+        <div>
+            <h1>Támogatóink</h1>
+            <ul>
+                <li><a href="https://www.otpbank.hu" target="_blank">OTP Bank</a></li>
+                <li><a href="https://www.trivago.hu" target="_blank">Trivago</a></li>
+                <li><a href="https://www.mavcsoport.hu" target="_blank">MÁV Zrt.</a></li>
+                <li><a href="https://wizzair.com/hu-hu#/" target="_blank">Wizz Air</a></li>
+            </ul>
+        </div>
+        <div class="adress">
+            <h1>Kapcsolat</h1>
+            <ul>
+                <li>1111. Budapest Malom utca 5.</li>
+                <li>+36 20 437 9625</li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

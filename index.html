@@ -1,81 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utaszási Iroda</title>
+    <title>Utaszási Iroda - Főoldal</title>
     <script src="scripts.js" type ="text/javascript">
         document.onload = "setcss()";
     </script>
-    <link id="css" rel="stylesheet" href="light.css">
+    <link id="css" rel="stylesheet" href="normal.css" />
+    <link rel="stylesheet" href="nyomtatas.css" media="print" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css' rel='stylesheet'>
-    
 </head>
-<body onload="setcss()">
+<body onload="setPage()">
     <header>
-        <a href="./index.html" class="home">Főoldal</a>
+        <button type="button" onclick="mobileNav()" class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
         <nav>
-            <ul>
+            <ul id="navigation" data-visible="false">
+                <li><a href="./index.html" class="home" style="color:gold;">Főoldal</a></li>
                 <li><a href="./kulfold.html">Külföldi utak</a></li>
                 <li><a href="./belfold.html">Belföldi utak</a></li>
                 <li><a href="./foglalas.html">Utazás Foglalása</a></li>
-                <li><a href="#contact">Kapcsolat</a></li>
+                <li><a type="button" class="toggleicon" onclick="nagybetus()"><img id="icon" src="kepek/light-mode-toggle-icon.png" alt=""></a></li>
             </ul>
         </nav>
-        <a type="button" class="toggleicon" onclick="lightswitch()"><img id="icon" src="kepek/light-mode-toggle-icon.png" alt=""></a>
-        
     </header>
     <main>
         <div class="main_kep">
-            <p>Üdvözöljük utazási honlapunkon!</p>
+            <p>Üdvözöljük utazási irodánk honlapján!</p>
         </div>
         <section class="hirek">
             <hr width="75%">
-            <label for="">Hírek</label>
+            <h1>Hírek</h1>
             <article class="hir">
-                <img src="./kepek/Olaszorszag_Hír.jpg" alt="Olaszország">
+                <figure>
+                    <img src="./kepek/Olaszorszag_Hír.jpg" alt="Olaszország">
+                    <figcaption>Római kolosszeum, Italy.</figcaption>
+                </figure>
                 <h2>Olaszország júniusban újra megnyílik a turisták előtt oltási útlevéllel</h2>
                 <p>Olaszország, az egyik legnépszerűbb turisztikai célpont a világon, bejelentette, hogy júniusban újra megnyitja kapuit a látogatók előtt. Az ország kormánya jelenleg egy oltási útlevél terven dolgozik, amely lehetővé tenné a turisták számára, hogy karantén nélkül belépjenek, feltéve, hogy teljesen be vannak oltva a COVID-19 ellen, vagy negatív teszt eredményt tudnak felmutatni. Ez nagyszerű hír azoknak az utazóknak, akik álmodoztak arról, hogy meglátogassák Olaszország gyönyörű városait, csodálatos strandjait és világhírű konyháját.</p>
             </article>
             <hr width="50%">
             <article class="hir">
-                <img src="./kepek/Japan_Hír.jpg" alt="">
+                <figure>
+                    <img src="./kepek/Japan_Hír.jpg" alt="Japán vonat">
+                    <figcaption>Új japán vonat</figcaption>
+                </figure>
+                
                 <h2>Japán új, luxusvonatot indít az ország keleti részén</h2>
                 <p>Japán híres a világ legfejlettebb vasúti rendszeréről, és most egy új luxusvonattal teszik még kényelmesebbé az utazást. Az East Japan Railway Company (JR East) bejelentette, hogy 2023-ban indul a Train Suite Shiki-Shima nevű vonat, amely az ország keleti részén fog közlekedni. A vonatban a legjobb minőségű ételeket és italokat kínálják, és a vendégek a panorámakilátásban is gyönyörködhetnek, mivel a vonat körbejárja a Tōhoku régió nevezetességeit.</p>
             </article>
             <hr width="50%">
             <article class="hir">
-                <img src="./kepek/Arab_Hír.jpg" alt="">
+                <figure>
+                    <img src="./kepek/Arab_Hír.jpg" alt="Egyesült Arab Emírségek">
+                    <figcaption> Burj Khalifa</figcaption>
+                </figure>
+                
                 <h2>Az Egyesült Arab Emírségek megnyitja kapuit az ismételt látogatások előtt a turisták előtt</h2>
-                <p>Japán híres a világ legfejlettebb vasúti rendszeréről, és most egy új luxusvonattal teszik még kényelmesebbé az utazást. Az East Japan Railway Company (JR East) bejelentette, hogy 2023-ban indul a Train Suite Shiki-Shima nevű vonat, amely az ország keleti részén fog közlekedni. A vonatban a legjobb minőségű ételeket és italokat kínálják, és a vendégek a panorámakilátásban is gyönyörködhetnek, mivel a vonat körbejárja a Tōhoku régió nevezetességeit.</p>
+                <p>Az Egyesült Arab Emírségek (EAU) bejelentette, hogy megnyitja kapuit a turisták előtt, akik már egyszer ellátogattak az országba, de visszatérnének. A turistáknak bizonyítaniuk kell, hogy a koronavírus elleni oltási program részeseként legalább egy adagot megkaptak, vagy negatív teszteredményt kell bemutatniuk. Ez jó hír azok számára, akik már szeretnék újra felfedezni az EAU izgalmas városait, kulturális és természeti látnivalóit, valamint luxus szállodáit és bevásárlóközpontjait.</p>
             </article>
         </section>
         <section class="vid">
             <hr width="75%">
+            <a href="video.html">
+                <h1>Az év tengerpartja</h1>
             <video width="100%" autoplay muted>
                 <source src="./kepek/video.mp4" type="video/mp4">
-            </video>
+            </video></a>
         </section>
     </main>
     <footer id="contact">
-        <div class="links">
+        <div>
+            <h1>Hírek</h1>
             <ul>
-                <li>Külföldi utak</li>
-                <li>Belföldi utak</li>
-                <li>Utazás foglalása</li>
+                <li><a href="">Olaszország </a></li>
+                <li><a href="">Japán</a></li>
+                <li><a href="">Arab Emírségek</a></li>
+                <li><a href="">Videós hír</a></li>
             </ul>
         </div>
         <div class="links">
+            <h1>Linkek</h1>
             <ul>
-                <li>Európa</li>
-                <li>Amerika</li>
-                <li>Magyarország</li>
+                <li><a href="kulfold.html#eu"> Európa </a></li>
+                <li><a href="kulfold.html#america"> Amerika </a></li>
+                <li><a href="kulfold.html#asia"> Ázsia </a></li>
+                <li><a href="belfold.html"> Magyarország </a></li>
+            </ul>
+        </div>
+        <div>
+            <h1>Támogatóink</h1>
+            <ul>
+                <li><a href="https://www.otpbank.hu" target="_blank">OTP Bank</a></li>
+                <li><a href="https://www.trivago.hu" target="_blank">Trivago</a></li>
+                <li><a href="https://www.mavcsoport.hu" target="_blank">MÁV Zrt.</a></li>
+                <li><a href="https://wizzair.com/hu-hu#/" target="_blank">Wizz Air</a></li>
             </ul>
         </div>
         <div class="adress">
+            <h1>Kapcsolat</h1>
             <ul>
                 <li>1111. Budapest Malom utca 5.</li>
                 <li>+36 20 437 9625</li>

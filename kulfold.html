@@ -4,35 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Külföldi utak</title>
-    <link id="css" rel="stylesheet" href="light.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire|neon"
-    />
+    <title>Utazási Iroda - Külföldi utak</title>
+    <link id="css" rel="stylesheet" href="normal.css" />
+    <link rel="stylesheet" href="nyomtatas.css" media="print" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire|neon"/>
     <script src="scripts.js"></script>
   </head>
-  <body onload="setcss()">
+  <body onload="setPage()">
     <a href="#" class="top_scroll"><img src="kepek/scrolltop.png" alt=""></a>
     <header>
-      <a href="./index.html" class="home">Főoldal</a>
+      <button type="button" onclick="mobileNav()" class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
       <nav>
-        <ul>
-          <li><a href="./kulfold.html">Külföldi utak</a></li>
-          <li><a href="./belfold.html">Belföldi utak</a></li>
-          <li><a href="./foglalas.html">Utazás Foglalása</a></li>
-          <li><a href="#contact">Kapcsolat</a></li>
-        </ul>
+          <ul id="navigation" data-visible="false">
+              <li><a href="./index.html" class="home" >Főoldal</a></li>
+              <li><a href="./kulfold.html" style="color:gold;">Külföldi utak</a></li>
+              <li><a href="./belfold.html">Belföldi utak</a></li>
+              <li><a href="./foglalas.html">Utazás Foglalása</a></li>
+              <li><a type="button" class="toggleicon" onclick="nagybetus()"><img id="icon" src="kepek/light-mode-toggle-icon.png" alt=""></a></li>
+          </ul>
       </nav>
-      <a type="button" class="toggleicon" onclick="lightswitch()"
-        ><img id="icon" src="kepek/light-mode-toggle-icon.png" alt=""
-      /></a>
-    </header>
+  </header>
     <main>
       <section class="kategoriak">
         <div class="eu" style="background-image: url(kepek/europe.jpg)">
           <a href="#eu"
-            ><h2>Európa</h2>
+            ><h1>Európa</h1>
             <p class="child">
               Fedezd fel Európa szépségeit és sokszínűségét! Történelmi
               látnivalóktól kezdve a lenyűgöző tájig, ínycsiklandó konyhától a
@@ -44,7 +40,7 @@
 
         <div class="asia" style="background-image: url(kepek/asia.jpg)">
           <a href="#asia"
-            ><h2>Ázsia</h2>
+            ><h1>Ázsia</h1>
             <p class="child">
               Fedezd fel Ázsia varázsát! Az ősi kultúrák, változatos táj, és
               ínycsiklandó konyha az Ázsia csodákkal teli földrésze. A vibráló
@@ -56,7 +52,7 @@
 
         <div class="america" style="background-image: url(kepek/america.jpg)">
           <a href="#america"
-            ><h2>Amerika</h2>
+            ><h1>Amerika</h1>
             <p class="child">
               Az Amerikák lenyűgöző tája a Rocky hegységtől az egész
               Karib-tenger partvidékéig. Az élénk városok, gazdag történelem és
@@ -68,7 +64,7 @@
 
         <div class="other" style="background-image: url(kepek/other.jpg)">
           <a href="#other"
-            ><h2>További</h2>
+            ><h1>További</h1>
             <p class="child">
               Menekülj a mindennapokból és fedezd fel a világ ritkán látogatott
               úti céljait. Rengeteg lenyűgöző helyet felfedezhetsz, amelyek
@@ -80,57 +76,57 @@
       </section>
       <hr width="75%" id="eu">
       <section class="ajanlatok">
-        <label for="" >Európai utak</label>
+        <h1>Európai utak</h1>
         <article>
-          <img src="./kepek/Róma.jpg" alt="" />
+          <a href="kepek/Róma.jpg" target="_blank"><img src="./kepek/Róma.jpg" alt="Római kolosszeum" /></a>
           <h2>Róma</h2>
           <p>Vágyakozol a múlt csodáinak nyomában járni? Fedezd fel Róma rejtett kincseit, és kóstold meg az igazi olasz életérzést! Élvezd a város hangulatos kis utcáit, csodáld meg a híres Colosseumot és a Vatikánt, és kóstold meg a legjobb olasz konyhát!</p>
           <div class="reszletek"><a type="button" onclick="foglal('Róma')">Foglalás</a></div>
         </article>
         <article>
-            <img src="./kepek/Barcelona.jpg" alt="" />
+            <a href="kepek/Barcelona.jpg" target="_blank"><img src="./kepek/Barcelona.jpg" alt="Barcelona"></a>
             <h2>Barcelona</h2>
             <p>Szeretnél megtapasztalni egy mediterrán életérzést? Utazz el Barcelonába, ahol az élet szép és egyszerű! Csodáld meg Gaudí épületeit, látogass el a La Sagrada Familia-ba, és sétálj el a híres La Rambla utcán. Élvezd a spanyol ételeket és az esti fényeket a város hangulatos teraszain!</p>
             <div class="reszletek"><a type="button" onclick="foglal('Barcelona')">Foglalás</a></div>
           </article>
           <hr width="50%" id="asia">
-        <label for="" >Ázsiai utak</label>
+        <h1>Ázsiai utak</h1>
         <article>
-          <img src="./kepek/Tokyo.jpg" alt="" />
+          <a href="kepek/Tokyo.jpg" target="_blank"><img src="./kepek/Tokyo.jpg" alt="Tokyo"></a>
           <h2>Tokyo</h2>
           <p>Szeretnél átélni egy másik világot? Utazz el Tokióba, ahol a modern és hagyományos világ találkozik! Csodáld meg a híres templomokat és kerteket, tapasztald meg a japán étkezési kultúrát, és sétálj el a világ legnagyobb halpiacán. Élvezd a japán életérzést, és merülj el a japánok mindennapjaiban!</p>
           <div class="reszletek"><a type="button" onclick="foglal('Tokyo')">Foglalás</a></div>
         </article>
         <article>
-            <img src="./kepek/Bangkok.jpg" alt="" />
+            <a href="kepek/Bangkok.jpg" target="_blank"><img src="./kepek/Bangkok.jpg" alt="Bangkok" /></a>
             <h2>Bangkok</h2>
             <p>Vágyakozol az igazi ázsiai élményre? Utazz el Bangkokba, ahol a trópusi éghajlat és a hagyományos thai életérzés találkozik! Fedezd fel a híres templomokat és az éjszakai piacokat, élvezd a thai ételeket, és tapasztald meg a thai masszázs kényeztetését. Élvezd a hangulatos éjszakai életet, és tapasztald meg a thai vendégszeretetet!</p>
             <div class="reszletek"><a type="button" onclick="foglal('Bangkok')">Foglalás</a></div>
           </article>
           <hr width="50%" id="america">
-        <label for="" >Amerikai utak</label>
+        <h1>Amerikai utak</h1>
         <article>
-          <img src="./kepek/Hawaii.jpg" alt="" />
+          <a href="kepek/Hawaii.jpg" target="_blank"><img src="./kepek/Hawaii.jpg" alt="Hawaii"></a>
           <h2>Hawaii</h2>
           <p>Vágysz a paradicsomi élményre? Utazz el Hawaii szigetére, és élvezd a trópusi életet! Sétálj a híres tengerpartokon, merülj el a türkizkék óceánban, és fedezd fel a vulkánok különleges világát. Élvezd a színes koktélokat a hangulatos strandbárokban, és kapcsolj ki a hawaii kényeztető szolgáltatásokkal!</p>
           <div class="reszletek"><a type="button" onclick="foglal('Hawaii')">Foglalás</a></div>
         </article>
         <article>
-            <img src="./kepek/NewYork.jpg" alt="" />
+            <a href="kepek/NewYork.jpg" target="_blank"><img src="kepek/NewYork.jpg" alt="New York City"></a>
             <h2>New York</h2>
             <p>Szeretnéd megtapasztalni a nagyvárosi életet? Utazz el New Yorkba, ahol minden lehetséges! Látogasd meg a világhírű Empire State Buildinget, sétálj a Central Parkban, és élvezd a Broadway előadásokat. Élvezd az amerikai konyhát, és tapasztald meg a világ legizgalmasabb városának pezsgő éjszakai életét!</p>
             <div class="reszletek"><a type="button" onclick="foglal('New York')">Foglalás</a></div>
           </article>
           <hr width="50%" id="other">
-        <label for="" >További utak</label>
+        <h1>További utak</h1>
         <article>
-          <img src="./kepek/Madagaszkár.jpg" alt="" />
+          <a href="kepek/Madagaszkár.jpg" target="_blank"><img src="kepek/Madagaszkár.jpg" alt="Madagaszkár"></a>
           <h2>Madagaszkár</h2>
           <p>Fedezze fel az Afrika gyöngyszemét! Látogasson el Madagaszkárra, ahol megismerheti az őshonos lemúrok, a hatalmas baobab fák és a számos egyedi állatfaj életét. Élvezze a kalandokkal teli dzsungeltúrákat, és élje át az indrikák énekének varázsát. Foglaljon most és csodálja meg Madagaszkár varázslatos szépségét!</p>
           <div class="reszletek"><a type="button" onclick="foglal('Madagaszkár')">Foglalás</a></div>
         </article>
         <article>
-            <img src="./kepek/Sydney.jpg" alt="" />
+            <a href="kepek/Sydney.jpg" target="_blank"><img src="kepek/Sydney.jpg" alt="Sydney-i operaház"></a>
             <h2>Sydney</h2>
             <p>Vágyik egy felejthetetlen utazásra? Utazzon Sydneybe, és csodálja meg az ausztrál tengerparti város lenyűgöző látványát! Élvezze a homokos strandokat, fedezze fel a város pezsgő éjszakai életét, és ne hagyja ki a Sydney Opera House és a Harbour Bridge megtekintését sem! Ne habozzon, foglaljon most, és élvezze az ausztrál életérzést Sydneyben!</p>
             <div class="reszletek"><a type="button" onclick="foglal('Sydney')">Foglalás</a></div>
@@ -138,21 +134,35 @@
       </section>
     </main>
     <footer id="contact">
-      <div class="links">
+      <div>
+          <h1>Hírek</h1>
           <ul>
-              <li>Külföldi utak</li>
-              <li>Belföldi utak</li>
-              <li>Utazás foglalása</li>
+              <li>Olaszország</li>
+              <li>Japán</li>
+              <li>Egyesült Arab Emírségek</li>
+              <li>Videós hír</li>
           </ul>
       </div>
       <div class="links">
+          <h1>Linkek</h1>
           <ul>
-              <li>Európa</li>
-              <li>Amerika</li>
-              <li>Magyarország</li>
+              <li><a href="kulfold.html#eu"> Európa </a></li>
+              <li><a href="kulfold.html#america"> Amerika </a></li>
+              <li><a href="kulfold.html#asia"> Ázsia </a></li>
+              <li><a href="belfold.html"> Magyarország </a></li>
+          </ul>
+      </div>
+      <div>
+          <h1>Támogatóink</h1>
+          <ul>
+              <li><a href="https://www.otpbank.hu" target="_blank">OTP Bank</a></li>
+              <li><a href="https://www.trivago.hu" target="_blank">Trivago</a></li>
+              <li><a href="https://www.mavcsoport.hu" target="_blank">MÁV Zrt.</a></li>
+              <li><a href="https://wizzair.com/hu-hu#/" target="_blank">Wizz Air</a></li>
           </ul>
       </div>
       <div class="adress">
+          <h1>Kapcsolat</h1>
           <ul>
               <li>1111. Budapest Malom utca 5.</li>
               <li>+36 20 437 9625</li>

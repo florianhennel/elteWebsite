@@ -1,0 +1,26 @@
+@import url("normal.css");
+
+nav ul li,
+header a , .nav ul li,.header a,.main div, .main video,.hir p,.ajanlatok p{
+  font-size: 2rem;
+}
+.main_kep p,.hir h2,.ajanlatok h2{
+    font-size: 2.4rem;
+  }
+.ajanlatok h1,
+main h1 {
+  font-size: 3.7em;
+}
+
+footer,#footer,details p{
+    font-size: 1.7rem;
+}
+.reszletek a,.arak table,
+th,
+tr,
+td,form label {
+    font-size: 2.2rem;
+}
+#ad{
+    font-size: 1.5rem;
+}

@@ -2,6 +2,16 @@ function setPage(){
     setcss();
     if(localStorage.getItem("varos") != null){setVaros();}
     showPrices();
+    payAll();
+}
+function mobileNav(){
+    const nav = document.querySelector("#navigation");
+    const visibility = nav.getAttribute("data-visible");
+    if (visibility ==="false") {
+        nav.setAttribute("data-visible","true");
+    } else {
+        nav.setAttribute("data-visible","false");
+    }
 }
 function showPrices(){
 
@@ -20,38 +30,41 @@ function showPrices(){
         }
     }
     hova.setAttribute("value",hova.options[hova.selectedIndex].value);
+    payAll();
 }
 function setcss() {
-    if (localStorage.getItem('theme') == "light.css") {
+    if (localStorage.getItem('betuMeret') == "normal.css") {
         var element = document.getElementById('css');
-        element.setAttribute('href',"light.css");
+        element.setAttribute('href',"normal.css");
         var icon = document.getElementById('icon');
         icon.setAttribute('src',"kepek/light-mode-toggle-icon.png");
     }
-    else if(localStorage.getItem('theme') == "dark.css"){
+    else if(localStorage.getItem('betuMeret') == "nagybetus.css"){
         var element = document.getElementById('css');
-        element.setAttribute('href',"dark.css");
+        element.setAttribute('href',"nagybetus.css");
         var icon = document.getElementById('icon');
         icon.setAttribute('src',"kepek/dark-mode-toggle-icon.png");
         icon.classList.add('invert');
     }
     else {
         var element = document.getElementById('css');
-        localStorage.setItem('theme', element.getAttribute('href'));
+        localStorage.setItem('betuMeret', element.getAttribute('href'));
     }
 }
-function lightswitch() {
-    var darklight = document.getElementById('css');
+function nagybetus() {
+    
+    var current = document.getElementById('css');
     var icon = document.getElementById('icon');
-    if (darklight.getAttribute('href') == 'light.css') {
-        document.getElementById('css').setAttribute('href', 'dark.css');
-        localStorage.setItem('theme','dark.css');
+    console.log(current.getAttribute("href"));
+    if (current.getAttribute('href') == 'normal.css') {
+        current.setAttribute('href', 'nagybetus.css');
+        localStorage.setItem('betuMeret','nagybetus');
         icon.setAttribute("src","kepek/dark-mode-toggle-icon.png");
         icon.classList.add('invert');
     }
     else {
-        document.getElementById('css').setAttribute('href', 'light.css');
-        localStorage.setItem('theme','light.css');
+        current.setAttribute('href', 'normal.css');
+        localStorage.setItem('betuMeret','normal.css');
         icon.setAttribute('src',"kepek/light-mode-toggle-icon.png");
     }
 }

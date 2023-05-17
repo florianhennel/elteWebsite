@@ -1,0 +1,59 @@
+body{
+    background-color: black;
+}
+header,.header{
+    display: none;
+}
+.main_kep{
+display: none;
+}
+.toggleicon {
+    display: none;
+  }
+  footer,#footer{
+    display: none;
+  }
+  main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 3vh;
+  }
+  .main div{
+    width: 70%;
+  }
+  .ajanlatok h1,
+  main h1 {
+    font-size: 3em;
+  }
+  .form_arak {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  form {
+    width: 80%;
+  }
+  main section article {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 5%;
+  }
+  .hir figure {
+    display: none;
+  }
+  video{
+    display: none;
+  }
+  .kategoriak{
+    display: none;
+  }
+  .top_scroll{
+    display: none;
+  }
+  .aside{
+    display: none;
+  }
