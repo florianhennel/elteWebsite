@@ -5,34 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Utaszási Iroda - Főoldal</title>
-    <script src="scripts.js" type ="text/javascript">
-        document.onload = "setcss()";
-    </script>
-    <link id="css" rel="stylesheet" href="normal.css" />
-    <link rel="stylesheet" href="nyomtatas.css" media="print" />
+    
+    <link id="css" rel="stylesheet" href="normal.css">
+    <link rel="stylesheet" href="nyomtatas.css" media="print">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire">
+    <script src="scripts.js"></script>
 </head>
-<body onload="setPage()">
+<body>
     <header>
-        <button type="button" onclick="mobileNav()" class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
+        <button type="button" onclick="mobileNav()" class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
         <nav>
             <ul id="navigation" data-visible="false">
-                <li><a href="./index.html" class="home" style="color:gold;">Főoldal</a></li>
-                <li><a href="./kulfold.html">Külföldi utak</a></li>
-                <li><a href="./belfold.html">Belföldi utak</a></li>
-                <li><a href="./foglalas.html">Utazás Foglalása</a></li>
-                <li><a type="button" class="toggleicon" onclick="nagybetus()"><img id="icon" src="kepek/light-mode-toggle-icon.png" alt=""></a></li>
+                <li><a href="./index.html#index" class="home" style="color:gold;">Főoldal</a></li>
+                <li><a href="./kulfold.html#kulfold">Külföldi utak</a></li>
+                <li><a href="./belfold.html#belfold">Belföldi utak</a></li>
+                <li><a href="./foglalas.html#foglalas">Utazás Foglalása</a></li>
+                <li><a href="#" class="toggleicon" onclick="nagybetus()"><img id="icon" src="kepek/nagybetu.jpg" alt="nagybetu"></a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="#index">
         <div class="main_kep">
             <p>Üdvözöljük utazási irodánk honlapján!</p>
         </div>
         <section class="hirek">
-            <hr width="75%">
+            <hr style="width:75%;">
             <h1>Hírek</h1>
-            <article class="hir">
+            <article class="hir" id="olasz_hir">
                 <figure>
                     <img src="./kepek/Olaszorszag_Hír.jpg" alt="Olaszország">
                     <figcaption>Római kolosszeum, Italy.</figcaption>
@@ -40,8 +39,8 @@
                 <h2>Olaszország júniusban újra megnyílik a turisták előtt oltási útlevéllel</h2>
                 <p>Olaszország, az egyik legnépszerűbb turisztikai célpont a világon, bejelentette, hogy júniusban újra megnyitja kapuit a látogatók előtt. Az ország kormánya jelenleg egy oltási útlevél terven dolgozik, amely lehetővé tenné a turisták számára, hogy karantén nélkül belépjenek, feltéve, hogy teljesen be vannak oltva a COVID-19 ellen, vagy negatív teszt eredményt tudnak felmutatni. Ez nagyszerű hír azoknak az utazóknak, akik álmodoztak arról, hogy meglátogassák Olaszország gyönyörű városait, csodálatos strandjait és világhírű konyháját.</p>
             </article>
-            <hr width="50%">
-            <article class="hir">
+            <hr style="width:50%;">
+            <article class="hir" id="japan_hir">
                 <figure>
                     <img src="./kepek/Japan_Hír.jpg" alt="Japán vonat">
                     <figcaption>Új japán vonat</figcaption>
@@ -50,8 +49,8 @@
                 <h2>Japán új, luxusvonatot indít az ország keleti részén</h2>
                 <p>Japán híres a világ legfejlettebb vasúti rendszeréről, és most egy új luxusvonattal teszik még kényelmesebbé az utazást. Az East Japan Railway Company (JR East) bejelentette, hogy 2023-ban indul a Train Suite Shiki-Shima nevű vonat, amely az ország keleti részén fog közlekedni. A vonatban a legjobb minőségű ételeket és italokat kínálják, és a vendégek a panorámakilátásban is gyönyörködhetnek, mivel a vonat körbejárja a Tōhoku régió nevezetességeit.</p>
             </article>
-            <hr width="50%">
-            <article class="hir">
+            <hr style="width:50%;">
+            <article class="hir" id="arab_hir">
                 <figure>
                     <img src="./kepek/Arab_Hír.jpg" alt="Egyesült Arab Emírségek">
                     <figcaption> Burj Khalifa</figcaption>
@@ -61,11 +60,11 @@
                 <p>Az Egyesült Arab Emírségek (EAU) bejelentette, hogy megnyitja kapuit a turisták előtt, akik már egyszer ellátogattak az országba, de visszatérnének. A turistáknak bizonyítaniuk kell, hogy a koronavírus elleni oltási program részeseként legalább egy adagot megkaptak, vagy negatív teszteredményt kell bemutatniuk. Ez jó hír azok számára, akik már szeretnék újra felfedezni az EAU izgalmas városait, kulturális és természeti látnivalóit, valamint luxus szállodáit és bevásárlóközpontjait.</p>
             </article>
         </section>
-        <section class="vid">
-            <hr width="75%">
+        <section class="vid" id="vid_hir">
+            <hr style="width:75%;">
             <a href="video.html">
-                <h1>Az év tengerpartja</h1>
-            <video width="100%" autoplay muted>
+                <h2>Az év tengerpartja</h2>
+            <video style="width:100%;" autoplay muted>
                 <source src="./kepek/video.mp4" type="video/mp4">
             </video></a>
         </section>
@@ -74,10 +73,10 @@
         <div>
             <h1>Hírek</h1>
             <ul>
-                <li><a href="">Olaszország </a></li>
-                <li><a href="">Japán</a></li>
-                <li><a href="">Arab Emírségek</a></li>
-                <li><a href="">Videós hír</a></li>
+                <li><a href="#olasz_hir">Olaszország </a></li>
+                <li><a href="#japan_hir">Japán</a></li>
+                <li><a href="#arab_hir">Arab Emírségek</a></li>
+                <li><a href="#vid_hir">Videós hír</a></li>
             </ul>
         </div>
         <div class="links">
@@ -86,7 +85,7 @@
                 <li><a href="kulfold.html#eu"> Európa </a></li>
                 <li><a href="kulfold.html#america"> Amerika </a></li>
                 <li><a href="kulfold.html#asia"> Ázsia </a></li>
-                <li><a href="belfold.html"> Magyarország </a></li>
+                <li><a href="belfold.html#belfold"> Magyarország </a></li>
             </ul>
         </div>
         <div>
@@ -102,8 +101,7 @@
             <h1>Kapcsolat</h1>
             <ul>
                 <li>1111. Budapest Malom utca 5.</li>
-                <li>+36 20 437 9625</li>
-                <li></li>
+                <li>+36 1 111 1111</li>
             </ul>
         </div>
     </footer>

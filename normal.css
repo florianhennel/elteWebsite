@@ -46,7 +46,8 @@ nav li:active,
   display: none;
 }
 #icon {
-  height: 25px;
+  height: 35px;
+  mix-blend-mode: multiply;
 }
 main,.main{
   display: flex;
@@ -58,7 +59,7 @@ main,.main{
   width: 100%;
   min-height: 100vh;
 }
-.main div, .main video{
+.main div{
   width: 60%;
   text-align: justify;
   background-color: lightcyan;
@@ -86,7 +87,6 @@ fieldset {
   font-size: 100%;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-transform: uppercase;
-  text-shadow: #333;
   font-size: 1.7rem;
 }
 .ajanlatok h1{
@@ -286,7 +286,7 @@ td {
 details p {
   font-size: 1rem;
 }
-.repuloar {
+.repuloar,.buszar {
   display: none;
 }
 .vid a{
@@ -296,6 +296,10 @@ details p {
   align-items: center;
   text-align: center;
 }
+#foglalas{
+  margin-top:62px;
+}
+
 @media screen and (max-width: 1400px) {
   main section {
     width: 70%;
@@ -373,7 +377,6 @@ details p {
     background-repeat: no-repeat;
     background-size: cover;
     width: 3rem;
-    aspect-ratio: 1;
     top: 2rem;
     left: 2rem;
     z-index: 9999;
@@ -389,6 +392,7 @@ details p {
     aspect-ratio: 1/1.5;
     background-position: center;
     background-size: cover;
+    object-fit: contain;
   }
   .ajanlatok img {
     display: none;

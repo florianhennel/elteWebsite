@@ -1,5 +1,6 @@
+document.onload=setPage();
 function setPage(){
-    setcss();
+    if (localStorage.getItem('betuMeret') != null) {setcss();}
     if(localStorage.getItem("varos") != null){setVaros();}
     showPrices();
     payAll();
@@ -14,7 +15,7 @@ function mobileNav(){
     }
 }
 function showPrices(){
-
+    let ind  = 0;
     var hova = document.getElementById("hova");
     const varosok = [];
     document.querySelectorAll("option").forEach(element => {
@@ -24,53 +25,48 @@ function showPrices(){
     for (let index = 0; index < varosok.length; index++) {
         if (varosok[index] == hova.options[hova.selectedIndex].value && hova.options[hova.selectedIndex].value != "")  {
             sorok[index].style.border = "solid 2px red";
+            ind = index;
         }
         else{
             sorok[index].style.border = "none";
         }
     }
     hova.setAttribute("value",hova.options[hova.selectedIndex].value);
+    if(ind < 9){
+        document.getElementById("repulo").checked = "checked";
+    }else{
+        document.getElementById("busz").checked = "checked";
+    }
     payAll();
 }
 function setcss() {
-    if (localStorage.getItem('betuMeret') == "normal.css") {
-        var element = document.getElementById('css');
-        element.setAttribute('href',"normal.css");
-        var icon = document.getElementById('icon');
-        icon.setAttribute('src',"kepek/light-mode-toggle-icon.png");
+    console.log("setcss()");
+    var element = document.querySelector("#css");
+    if (localStorage.getItem('betuMeret') == "normal.css") { 
+        element.href = "normal.css";
     }
     else if(localStorage.getItem('betuMeret') == "nagybetus.css"){
-        var element = document.getElementById('css');
-        element.setAttribute('href',"nagybetus.css");
-        var icon = document.getElementById('icon');
-        icon.setAttribute('src',"kepek/dark-mode-toggle-icon.png");
-        icon.classList.add('invert');
+        element.href = "nagybetus.css";
     }
-    else {
-        var element = document.getElementById('css');
+    else{
         localStorage.setItem('betuMeret', element.getAttribute('href'));
+        console.log(localStorage.getItem('betuMeret'));
     }
 }
-function nagybetus() {
-    
+function nagybetus(){
     var current = document.getElementById('css');
-    var icon = document.getElementById('icon');
-    console.log(current.getAttribute("href"));
-    if (current.getAttribute('href') == 'normal.css') {
+    if (current.getAttribute('href') == 'normal.css'){
         current.setAttribute('href', 'nagybetus.css');
-        localStorage.setItem('betuMeret','nagybetus');
-        icon.setAttribute("src","kepek/dark-mode-toggle-icon.png");
-        icon.classList.add('invert');
+        localStorage.setItem('betuMeret','nagybetus.css');
     }
-    else {
+    else{
         current.setAttribute('href', 'normal.css');
         localStorage.setItem('betuMeret','normal.css');
-        icon.setAttribute('src',"kepek/light-mode-toggle-icon.png");
     }
 }
 function foglal(hol){
     localStorage.setItem("varos",hol);
-    window.location.href="foglalas.html";
+    window.location.href="foglalas.html#foglalas";
 
 }
 function setVaros(){
@@ -102,12 +98,18 @@ function payAll(){
     if (repulo) {
         document.querySelectorAll(".repuloar").forEach(element => {
             element.style.display = "table-cell";
-        })
+        });
+        document.querySelectorAll(".buszar").forEach(element => {
+            element.style.display = "none";
+        });
     }
-    else{
+    else if(busz){
+        document.querySelectorAll(".buszar").forEach(element =>{
+            element.style.display = "table-cell";
+        });
         document.querySelectorAll(".repuloar").forEach(element => {
             element.style.display = "none";
-        })
+        });
     }
     const sorok = Array.from(document.getElementsByTagName("tr"));
     sorok.forEach(sor=> {

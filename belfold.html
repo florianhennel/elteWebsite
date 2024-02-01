@@ -7,46 +7,41 @@
     <title>Utazási Iroda - Belföldi utak</title>
     <link id="css" rel="stylesheet" href="normal.css" />
     <link rel="stylesheet" href="nyomtatas.css" media="print" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire|neon"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <script src="scripts.js"></script>
   </head>
-  <body onload="setcss()">
-    <a href="#" class="top_scroll"><img src="kepek/scrolltop.png" alt=""></a>
+  <body>
+    <a href="#" class="top_scroll"><img src="kepek/scrolltop.png" alt="scrollToTop">
+    </a>
     <header>
-      <button type="button" onclick="mobileNav()" class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
+      <button  onclick="mobileNav()" class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
       <nav>
           <ul id="navigation" data-visible="false">
               <li><a href="./index.html" class="home" >Főoldal</a></li>
-              <li><a href="./kulfold.html">Külföldi utak</a></li>
-              <li><a href="./belfold.html" style="color:gold;">Belföldi utak</a></li>
-              <li><a href="./foglalas.html">Utazás Foglalása</a></li>
-              <li><a type="button" class="toggleicon" onclick="nagybetus()"><img id="icon" src="kepek/light-mode-toggle-icon.png" alt=""></li></a></li>
+              <li><a href="./kulfold.html#kulfold">Külföldi utak</a></li>
+              <li><a href="./belfold.html#belfold" style="color:gold;">Belföldi utak</a></li>
+              <li><a href="./foglalas.html#foglalas">Utazás Foglalása</a></li>
+              <li><a href="#" class="toggleicon" onclick="nagybetus()"><img id="icon" src="kepek/nagybetu.jpg" alt="nagybetu"></a></li>
           </ul>
       </nav>
-      
-      
   </header>
-    <main>
+    <main id="belfold">
       <section class="kategoriak">
         <div style="background-image: url(kepek/dunantul.jpg)">
-          <a href="#dunantul"
-            ><h1>Dunántúl</h1>
+          <a href="#dunantul">
+            <h1>Dunántúl</h1>
             <p class="child">
               Látogasson el a Dunántúlra, és fedezze fel Magyarország történelmi
               és természeti kincseit! Csodálja meg a gyönyörű hegyvidékeket,
               kiránduljon a festői völgyekben, és kóstolja meg a helyi
               ínyencségeket. Élvezze a természet nyugalmát és a kulturális
               programokat egyaránt a Dunántúlon!
-            </p></a
-          >
+            </p></a>
         </div>
 
         <div style="background-image: url(kepek/alfold.jpg)">
-          <a href="#alfold"
-            ><h1>Alföld</h1>
+          <a href="#alfold">
+            <h1>Alföld</h1>
             <p class="child">
               Szeretne elvonulni a város zajától? Látogasson el az Alföldre, és
               fedezze fel a magyar pusztát és a Hortobágyi Nemzeti Park
@@ -85,7 +80,7 @@
           >
         </div>
       </section>
-      <hr width="75%" id="dunantul">
+      <hr style="width:75%;" id="dunantul">
       <section class="ajanlatok">
         <h1>Dunántúli utak</h1>
         <article>
@@ -94,7 +89,7 @@
           <p>
             Fedezd fel Pécs kulturális kincseit és varázslatos belvárosát! Élvezd a mediterrán hangulatot a Széchenyi téren vagy sétálj az UNESCO világörökségi helyszíneken. Számos múzeum és műemlék vár rád, ne hagyd ki a Zsolnay Kulturális Negyedet sem!
           </p>
-          <div class="reszletek"><a type="button" onclick="foglal('Pécs')">Foglalás</a></div>
+          <div class="reszletek"><a  onclick="foglal('Pécs')">Foglalás</a></div>
         </article>
         <article>
           <a href="kepek/Villány.png" target="_blank"><img src="./kepek/Villány.jpg" alt="Villány"></a>
@@ -102,9 +97,9 @@
           <p>
             Borbarátok figyelem! Látogass el Villányba, és kóstold meg a régió világhírű borait! A gyönyörű táj és a kiváló minőségű borok garantáltan elvarázsolnak. Kirándulj a Szársomlyó-hegyre, vagy kerékpározz végig a Villányi borúton!
           </p>
-          <div class="reszletek"><a type="button" onclick="foglal('Villány')">Foglalás</a></div>
+          <div class="reszletek"><a  onclick="foglal('Villány')">Foglalás</a></div>
         </article>
-        <hr width="50%" id="alfold">
+        <hr style="width:50%;" id="alfold">
         <h1>Alföldi utak</h1>
         <article>
           <a href="kepek/Szeged.jpg" target="_blank"><img src="./kepek/Szeged.jpg" alt="Szeged" /></a>
@@ -112,7 +107,7 @@
           <p>
             Csodálkozz Szeged gyönyörű szecessziós épületein és ne hagyd ki a Tiszát sem! Sétálj az élménydús belvárosban és kóstold meg a híres szegedi halászlét. Látogass el a Dóm térre, ahol az ország egyik legszebb katedrálisa áll, vagy fedezd fel a Móra Ferenc Múzeumot!
           </p>
-          <div class="reszletek"><a type="button" onclick="foglal('Szeged')">Foglalás</a></div>
+          <div class="reszletek"><a  onclick="foglal('Szeged')">Foglalás</a></div>
         </article>
         <article>
           <a href="kepek/Hortobágy.jpg" target="_blank"><img src="./kepek/Hortobágy.jpg" alt="Hortobágy"></a>
@@ -120,9 +115,9 @@
             <p>
               Hortobágy a magyar puszták legnagyobb területű és legszebb tájai közé tartozik. A Hortobágyi Nemzeti Parkban az eredeti állatvilág és a tradicionális pásztorkodás elevenedik meg. A terület számos kirándulási és túrázási lehetőséget kínál a természet szerelmeseinek.
             </p>
-            <div class="reszletek"><a type="button" onclick="foglal('Hortobágy')">Foglalás</a></div>
+            <div class="reszletek"><a  onclick="foglal('Hortobágy')">Foglalás</a></div>
           </article>
-          <hr width="50%" id="balaton">
+          <hr style="width:50%;" id="balaton">
         <h1>Balatoni utak</h1>
         <article>
           <a href="kepek/Siófok.jpg" target="_blank"><img src="./kepek/Siófok.jpg" alt="Siófok" /></a>
@@ -130,7 +125,7 @@
           <p>
             Siófok, a Balaton fővárosa minden évben több ezer turistát vonz az ország minden pontjáról. A város számos lehetőséget kínál az aktív kikapcsolódásra: szörfözés, vitorlázás, kerékpározás és még sok más sportág. Siófok a vidám nyári életéről ismert, ahol éjszakánként a számos bár és éjszakai klub garantálja az örömteli szórakozást.
           </p>
-          <div class="reszletek"><a type="button" onclick="foglal('Siófok')">Foglalás</a></div>
+          <div class="reszletek"><a  onclick="foglal('Siófok')">Foglalás</a></div>
         </article>
         <article>
           <a href="kepek/Tihany.jpg" target="_blank"><img src="./kepek/Tihany.jpg" alt="Tihany" /></a>
@@ -138,9 +133,9 @@
           <p>
             Tihany a Balaton egyik legszebb és leglátogatottabb helyszíne, amelyet a középkori apátság és a hozzá kapcsolódó múzeumok tesznek igazán különlegessé. A település különlegessége a Tihanyi-félsziget, ahol a látnivalók mellett csodálatos panoráma és remek kirándulási lehetőségek várják az ideérkezőket.
           </p>
-          <div class="reszletek"><a type="button" onclick="foglal('Tihany')">Foglalás</a></div>
+          <div class="reszletek"><a  onclick="foglal('Tihany')">Foglalás</a></div>
         </article>
-        <hr width="50%" id="tiszantul">
+        <hr style="width:50%;" id="tiszantul">
         <h1>Tiszántúli utak</h1>
         <article>
           <a href="kepek/Debrecen.jpg" target="_blank"><img src="./kepek//Debrecen.jpg" alt="Debrecen"></a>
@@ -148,7 +143,7 @@
           <p>
             Debrecen a második legnagyobb város Magyarországon, amely kulturális és történelmi látnivalói miatt vonzó célpont a turisták számára. A városban található a Nagytemplom, amely a magyar protestantizmus egyik jelentős épülete, valamint számos múzeum és műemlék. Debrecen emellett híres gasztronómiai kínálatáról és virágzó kulturális életéről is.
           </p>
-          <div class="reszletek"><a type="button" onclick="foglal('Debrecen')">Foglalás</a></div>
+          <div class="reszletek"><a  onclick="foglal('Debrecen')">Foglalás</a></div>
         </article>
       </section>
 
@@ -157,11 +152,11 @@
       <div>
           <h1>Hírek</h1>
           <ul>
-              <li>Olaszország</li>
-              <li>Japán</li>
-              <li>Egyesült Arab Emírségek</li>
-              <li>Videós hír</li>
-          </ul>
+            <li><a href="index.html#olasz_hir">Olaszország </a></li>
+            <li><a href="index.html#japan_hir">Japán</a></li>
+            <li><a href="index.html#arab_hir">Arab Emírségek</a></li>
+            <li><a href="index.html#vid_hir">Videós hír</a></li>
+        </ul>
       </div>
       <div class="links">
           <h1>Linkek</h1>
@@ -169,7 +164,7 @@
               <li><a href="kulfold.html#eu"> Európa </a></li>
               <li><a href="kulfold.html#america"> Amerika </a></li>
               <li><a href="kulfold.html#asia"> Ázsia </a></li>
-              <li><a href="belfold.html"> Magyarország </a></li>
+              <li><a href="#belfold"> Magyarország </a></li>
           </ul>
       </div>
       <div>
@@ -184,10 +179,9 @@
       <div class="adress">
           <h1>Kapcsolat</h1>
           <ul>
-              <li>1111. Budapest Malom utca 5.</li>
-              <li>+36 20 437 9625</li>
-              <li></li>
-          </ul>
+            <li>1111. Budapest Malom utca 5.</li>
+            <li>+36 1 111 1111</li>
+        </ul>
       </div>
   </footer>
   </body>

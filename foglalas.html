@@ -7,32 +7,32 @@
     <title>Utazási Iroda - Foglalás</title>
     <link id="css" rel="stylesheet" href="normal.css">
     <link rel="stylesheet" href="nyomtatas.css" media="print" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire|neon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <script src="scripts.js"></script>
 </head>
 <body onload="setPage()">
     <header>
-        <button type="button" onclick="mobileNav()" class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
+        <button  onclick="mobileNav()" class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false"></button>
         <nav>
             <ul id="navigation" data-visible="false">
-                <li><a href="./index.html" class="home" >Főoldal</a></li>
-                <li><a href="./kulfold.html">Külföldi utak</a></li>
-                <li><a href="./belfold.html">Belföldi utak</a></li>
-                <li><a href="./foglalas.html" style="color:gold;">Utazás Foglalása</a></li>
-                <li><a type="button" class="toggleicon" onclick="nagybetus()"><img id="icon" src="kepek/light-mode-toggle-icon.png" alt="betumeret"></a></li>
+                <li><a href="./index.html#index" class="home" >Főoldal</a></li>
+                <li><a href="./kulfold.html#kulfold">Külföldi utak</a></li>
+                <li><a href="./belfold.html#belfold">Belföldi utak</a></li>
+                <li><a href="./foglalas.html#foglalas" style="color:gold;">Utazás Foglalása</a></li>
+                <li><a class="toggleicon" onclick="nagybetus()"><img id="icon" src="kepek/nagybetu.jpg" alt="nagybetu"></a></li>
             </ul>
         </nav>
         
         
     </header>
-    <main>
+    <main id="foglalas">
         <div class="form_arak">
         <form action="mailto:sj2afp@inf.elte.hu" method="POST" enctype="text/plain">
             <fieldset>
                 <legend>Úticél</legend>
                 <label for="hova">Hova</label><br>
-                <select name="varos" id="hova" value="" onclick="showPrices()" required>
-                    <option value=""></option>
+                <select name="varos" id="hova" onclick="showPrices()" required>
+                    <option label="Válasszon úticélt!"></option>
                     <option value="Róma">Róma</option>
                     <option value="Barcelona">Barcelona</option>
                     <option value="Tokyo">Tokyo</option>
@@ -59,7 +59,7 @@
             </fieldset>
             <fieldset>
                 <legend>Utasok</legend>
-                <label for="utas">Felnőtt utasok</label>
+                <label>Felnőtt utasok</label>
                 <input onclick="payAll()" type="number" name="felnott_utas" id="felnott" max="10" value="0">
                 <br>
                 <label for="gyerek">Gyerek utasok</label>
@@ -69,14 +69,16 @@
             <fieldset>
                 <legend>Szállás és utazás</legend>
 
-                <label for="utazas">Mivel szeretne utazni?</label><br>
+                <label>Mivel szeretne utazni?</label><br>
                 <input onclick="payAll()" type="radio" name="utazas" id="busz" value="Busz">
                 <label for="busz">Busz</label>
                 <input onclick="payAll()" type="radio" name="utazas" id="repulo" value="Repulo">
                 <label for="repulo">Repülő</label>
+                <input onclick="payAll()" type="radio" name="utazas" id="egyik_sem" value="None">
+                <label for="egyik_sem">Egyik sem</label>
                 <br>
 
-                <label for="hotel">Hány csillagos hotelben?</label><br>
+                <label>Hány csillagos hotelben?</label><br>
                 <input type="radio" name="hotel" id="1*" value="1*"><label for="1*">1*</label>
                 <input type="radio" name="hotel" id="2*" value="2*"><label for="2*">2*</label>
                 <input type="radio" name="hotel" id="3*" value="3*" checked><label for="3*">3*</label>
@@ -91,7 +93,7 @@
 
                 <label for="email" >Email-cím:</label><br>
                 <input type="email" id="email" minlength="3" name="email" maxlength="30" required><br>
-                <label for="ad" id="ad">Küldhetünk e önnek értesítést ajánlatainkról emailben?:</label>
+                <label for="ad">Küldhetünk e önnek értesítést ajánlatainkról emailben?:</label>
                 <input type="checkbox" id="ad" name="ajanlatok" value="igen"><br>
 
 
@@ -104,7 +106,7 @@
             <fieldset style=" display:flex;justify-content:space-evenly">
                 <legend>Adatok elküldése</legend>
             <input type="submit" value="Elküld">
-            <input type="reset" value="Töröl">
+            <input type="reset" value="Töröl" onclick="showPrices()">
         </fieldset>
         </form>
         <aside class="arak">
@@ -119,6 +121,7 @@
                 <th>Gyerek: Ft/éj</th>
                 <th>Felnőtt: Ft/éj</th>
                 <th class="repuloar">Repülés ára</th>
+                <th class="buszar">Busz ára</th>
                 </tr>
                 <tr>
                     <td>Róma</td>
@@ -172,36 +175,43 @@
                     <td>Pécs</td>
                     <td>5.000</td>
                     <td>15.000</td>
+                    <td class="buszar">10.000</td>
                 </tr>
                 <tr>
                     <td>Villány</td>
                     <td>3.000</td>
                     <td>7.000</td>
+                    <td class="buszar">10.000</td>
                 </tr>
                 <tr>
                     <td>Szeged</td>
                     <td>8.000</td>
                     <td>15.000</td>
+                    <td class="buszar">10.000</td>
                 </tr>
                 <tr>
                     <td>Hortobágy</td>
                     <td>2.000</td>
                     <td>5.000</td>
+                    <td class="buszar">7.000</td>
                 </tr>
                 <tr>
                     <td>Siófok</td>
                     <td>7.000</td>
                     <td>15.000</td>
+                    <td class="buszar">10.000</td>
                 </tr>
                 <tr>
                     <td>Tihany</td>
                     <td>7.000</td>
                     <td>15.000</td>
+                    <td class="buszar">10.000</td>
                 </tr>
                 <tr>
                     <td>Debrecen</td>
                     <td>7.000</td>
                     <td>14.000</td>
+                    <td class="buszar">10.000</td>
                 </tr>
                 <tr>
                     <td>Összesen:</td>
@@ -216,10 +226,10 @@
         <div>
             <h1>Hírek</h1>
             <ul>
-                <li>Olaszország</li>
-                <li>Japán</li>
-                <li>Egyesült Arab Emírségek</li>
-                <li>Videós hír</li>
+                <li><a href="index.html#olasz_hir">Olaszország </a></li>
+                <li><a href="index.html#japan_hir">Japán</a></li>
+                <li><a href="index.html#arab_hir">Arab Emírségek</a></li>
+                <li><a href="index.html#vid_hir">Videós hír</a></li>
             </ul>
         </div>
         <div class="links">
@@ -228,7 +238,7 @@
                 <li><a href="kulfold.html#eu"> Európa </a></li>
                 <li><a href="kulfold.html#america"> Amerika </a></li>
                 <li><a href="kulfold.html#asia"> Ázsia </a></li>
-                <li><a href="belfold.html"> Magyarország </a></li>
+                <li><a href="belfold.html#belfold"> Magyarország </a></li>
             </ul>
         </div>
         <div>
@@ -244,8 +254,7 @@
             <h1>Kapcsolat</h1>
             <ul>
                 <li>1111. Budapest Malom utca 5.</li>
-                <li>+36 20 437 9625</li>
-                <li></li>
+                <li>+36 1 111 1111</li>
             </ul>
         </div>
     </footer>

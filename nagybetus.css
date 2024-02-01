@@ -1,5 +1,12 @@
 @import url("normal.css");
 
+main,.main div, .main{
+  background-color: #212121;
+  color: gold;
+}
+form fieldset,.arak table, th , td, tr{
+  background-color: #212121;
+}
 nav ul li,
 header a , .nav ul li,.header a,.main div, .main video,.hir p,.ajanlatok p{
   font-size: 2rem;
@@ -11,15 +18,20 @@ header a , .nav ul li,.header a,.main div, .main video,.hir p,.ajanlatok p{
 main h1 {
   font-size: 3.7em;
 }
+.kategoriak div a h1{
+  color:gold;
+}
 
 footer,#footer,details p{
     font-size: 1.7rem;
+    color: gold;
 }
 .reszletek a,.arak table,
 th,
 tr,
 td,form label {
     font-size: 2.2rem;
+    color: gold;
 }
 #ad{
     font-size: 1.5rem;

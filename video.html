@@ -2,36 +2,31 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu" lang="hu">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Utaszási Iroda - Főoldal</title>
-    <script src="scripts.js" type ="text/javascript">
-        document.onload = "setcss()";
-    </script>
+    
     <link id="css" rel="stylesheet" href="normal.css" />
-    <link rel="stylesheet" href="nyomtatas.css" media="print">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=fire" />
+    <link rel="stylesheet" href="nyomtatas.css" media="print" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css' rel='stylesheet' />
+    <script src="scripts.js" type ="text/javascript"></script>
 </head>
 <body>
     <div class="header">
-        <button type="button" onclick="mobileNav()" class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
+        <button type="button" onclick="mobileNav()" class="mobile-nav-toggle" ></button>
         <div class="nav">
-            <ul id="navigation" data-visible="false">
-                <li><a href="./index.html" class="home" style="color:gold;">Főoldal</a></li>
-                <li><a href="./kulfold.html">Külföldi utak</a></li>
-                <li><a href="./belfold.html">Belföldi utak</a></li>
-                <li><a href="./foglalas.html">Utazás Foglalása</a></li>
-                <li><a type="button" class="toggleicon" onclick="lightswitch()"><img id="icon" src="kepek/light-mode-toggle-icon.png" alt=""></li></a></li>
+            <ul id="navigation" >
+                <li><a href="./index.html#index" class="home" style="color:gold;">Főoldal</a></li>
+                <li><a href="./kulfold.html#kulfold">Külföldi utak</a></li>
+                <li><a href="./belfold.html#belfold">Belföldi utak</a></li>
+                <li><a href="./foglalas.html#foglalas">Utazás Foglalása</a></li>
+                <li><a class="toggleicon" onclick="nagybetus()"><img id="icon" src="kepek/nagybetu.jpg" alt="nagybetu" /></a></li>
             </ul>
         </div>
     </div>
     <div class="main">
-        <video poster="kepek/beach.png" controls>
-                <source src="kepek/video.mp4" />
-        </video>
         <div class="beszamolo">
             
             <p>San Diego partjai, a dél-kaliforniai festői partszakaszon találhatóak, lenyűgöző úticélként szolgálnak, és 2023-ban is a legjobb strandnak számítanak. San Diego partjai tökéletesen ötvözik a homokos partok és az óceán nyújtotta szépséget. A város híres a mérsékelt klímájáról és a napsütéses időjárásról, amely lehetővé teszi, hogy a látogatók szinte egész évben élvezhessék a strandolás örömeit.</p>
@@ -47,10 +42,10 @@
         <div>
             <h1>Hírek</h1>
             <ul>
-                <li><a href="">Olaszország </a></li>
-                <li><a href="">Japán</a></li>
-                <li><a href="">Arab Emírségek</a></li>
-                <li><a href="">Videós hír</a></li>
+                <li><a href="index.html#olasz_hir">Olaszország </a></li>
+                <li><a href="index.html#japan_hir">Japán</a></li>
+                <li><a href="index.html#arab_hir">Arab Emírségek</a></li>
+                <li><a href="index.html#vid_hir">Videós hír</a></li>
             </ul>
         </div>
         <div class="links">
@@ -59,24 +54,23 @@
                 <li><a href="kulfold.html#eu"> Európa </a></li>
                 <li><a href="kulfold.html#america"> Amerika </a></li>
                 <li><a href="kulfold.html#asia"> Ázsia </a></li>
-                <li><a href="belfold.html"> Magyarország </a></li>
+                <li><a href="belfold.html#belfold"> Magyarország </a></li>
             </ul>
         </div>
         <div>
             <h1>Támogatóink</h1>
             <ul>
-                <li><a href="https://www.otpbank.hu" target="_blank">OTP Bank</a></li>
-                <li><a href="https://www.trivago.hu" target="_blank">Trivago</a></li>
-                <li><a href="https://www.mavcsoport.hu" target="_blank">MÁV Zrt.</a></li>
-                <li><a href="https://wizzair.com/hu-hu#/" target="_blank">Wizz Air</a></li>
+                <li><a href="https://www.otpbank.hu" onclick="target='_blank';">OTP Bank</a></li>
+                <li><a href="https://www.trivago.hu" onclick="target='_blank';">Trivago</a></li>
+                <li><a href="https://www.mavcsoport.hu" onclick="target='_blank';">MÁV Zrt.</a></li>
+                <li><a href="https://wizzair.com/hu-hu#/" onclick="target='_blank';">Wizz Air</a></li>
             </ul>
         </div>
         <div class="adress">
             <h1>Kapcsolat</h1>
             <ul>
                 <li>1111. Budapest Malom utca 5.</li>
-                <li>+36 20 437 9625</li>
-                <li></li>
+                <li>+36 1 111 1111</li>
             </ul>
         </div>
     </div>
